@@ -11,7 +11,7 @@
 | Freeze | 20:00 (deadline − 1 h; compressed, the 4 h event makes the standard −6 h fall before the start) → `Freeze-Epoch` |
 | Clean rehearsal / plan B | 19:30 (deadline − 1 h 30) |
 | Internal submission | 20:30 (deadline − 30 min) |
-| Humans | Fernando Vargas: team captain, receives the Reap API key via Telegram; Victor Ruiz; Sebastian Jara; Javier Reyna; Dylan Martinez · submission owner: TBD (captain by default) |
+| Humans | Fernando Vargas: team captain, receives the Reap API key via Telegram; Victor Ruiz; Sebastian Jara; Javier Reyna; Dylan Martinez · submission owner: Fernando Vargas |
 | Agents | TBD per human (max 2) |
 | Machines | laptops · ports already taken: none known |
 | Team | Axolutions · contact vargas.fer2442@gmail.com |
@@ -32,7 +32,7 @@ Judging criteria and weights are NOT published (unverified). Proxy rows come fro
 | Data and licenses | Sandbox only, no real money. Only merchants from /merchants in the Telegram bot | https://aibuilders.mx/reap |
 | Forbidden | Travel bookings, restricted categories (gambling, adult), scraping checkout, raw card data to an LLM, generic search-show-buy chatbot | https://aibuilders.mx/reap |
 | Required API | Reap Agentic module (docs.reap.global/agentic-payments/overview), or Payward wallet module + Agentic module | https://aibuilders.mx/reap |
-| Format and video limits | Not specified by the event; team limit 1-2 min. Gavel form fields unverified (page needs JavaScript) | team brief |
+| Format and video limits | Not specified by the event; team limit 1-2 min. Gavel form (confirmed by screenshot): Team name, Team captain, Contact email, Project link (GitHub/AI Studio/live demo), Demo video link (YouTube/Drive/hosted), Team members (optional), Project description (max 5000 chars), Sponsor prize tracks (choose up to 2: Reap Most Worthwhile Problem, Reap Best Bridge Onchain-Real World) | team brief |
 | Support | Telegram channel; Jose (Reap) technical, Adrian escalation | https://aibuilders.mx/reap |
 
 ## Plan B
