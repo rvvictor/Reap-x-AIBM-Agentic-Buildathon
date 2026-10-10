@@ -12,6 +12,6 @@ Verify: `uv run pytest -q app/tests/test_signals.py`
 Lease-Until: 1791612789
 Updated: 1791598389
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Human merge approved PR2 or maintainer correct gate; then uak integrate HACK-005
+Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -
