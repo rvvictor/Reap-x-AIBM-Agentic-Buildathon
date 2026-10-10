@@ -15,3 +15,4 @@
 - 1791601743 | CLAIMED | Javier-1 | claim; next: Pegar los 9 puntos oficiales, enlace del video, marcar checklist y pasar a REVIEW
 - 1791602015 | CLAIMED | Javier-1 | checkpoint; next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
 - 1791602092 | AVAILABLE | Javier-1 | release; claim released by Javier-1; reason: -; summary kept
+- 1791611212 | CLAIMED | sebastian-1 | claim; next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
