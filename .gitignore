@@ -3,3 +3,6 @@
 !.env.example
 .uak-env
 .claude/settings.local.json
+
+# Material del evento, nunca subir
+*.pdf
