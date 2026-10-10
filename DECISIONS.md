@@ -14,3 +14,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791597927 | HACK-006 | Resume HACK-006 here; preserve HACK-004 uncommitted forecast files | Why: Human requested recovery after terminal crash; duplicate sebastian-2 identity must be separated before concurrent execution
 - 1791598033 | HACK-005 | Known rejection resolved; require approval on new SHA before merge | Why: Previous approval did not cover null/scalar output defect
 - 1791598095 | HACK-010 | Demo-only draft until backend contracts available | Why: HACK006 request/response and HACK008 authorization/order status pending; no invented live statuses
+- 1791598249 | deadline decision/HACK-004-1791597330/1791598230 | REVERSIBLE_AND_LOG | Option: Stack local HACK-001 para pruebas; adapter provisional IDEA.md sin tocar schemas ni fixtures ajenos; Why: Esqueleto en REVIEW y contrato HACK-002 pendiente; permite verificar motor independiente; no money, accounts, publishing or scope expansion.

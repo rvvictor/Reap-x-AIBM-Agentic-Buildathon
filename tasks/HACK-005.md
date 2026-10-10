@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791612516
-Updated: 1791598116
+Lease-Until: 1791612649
+Updated: 1791598249
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
 Next: Independent re-review current PR2 SHA, then uak merge HACK-005
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: uv run pytest -q app/tests/test_signals.py: 25 passed; smoke PRODUCT_PASS; regression null/scalar model outputs now safe 502
-Events: 17
+Events: 18
 Checkpoints: 6
 Sessions: 5
 Last-Checkpoint: 1791598033
