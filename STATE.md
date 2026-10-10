@@ -11,7 +11,7 @@ CANCELLED: -
 
 Claims (first 24; status --task ID shows detail):
 HACK-003 | REVIEW | fernando-1 | until 1791613155
-HACK-004 | REVIEW | sebastian-2 | until 1791613200
+HACK-004 | REVIEW | sebastian-2 | until 1791613261
 HACK-005 | REVIEW | dylan-1 | until 1791613046
 HACK-006 | CLAIMED | sebastian-1 | until 1791600970
 HACK-009 | CLAIMED | victor-1 | until 1791600135
@@ -19,11 +19,11 @@ HACK-010 | CLAIMED | dylan-2 | until 1791601422
 
 Blockers: BLOCKED tasks; use status --task ID --summary.
 Current decisions (last 5):
-- 1791598368 | HACK-005 | Preserve human merge queue; do not bypass automatic scope gate | Why: Gate includes HACK001 upstream files from original Task-Base; current-main diff has 
 - 1791598547 | HACK-006 | Canonical contracts; MXN landed baselines; known-unit equivalence; business-level exclusion; caller quotes demo-only | Why: Apply advisor invariants; draf
 - 1791598498 | HACK-003 | sandbox sigue bloqueado sin REAP_API_KEY; el criterio queda cubierto con el 401 grabado | Why: no hay clave en .env
 - 1791598722 | HACK-010 | Draft pending actual backend integration and real payment contract | Why: HACK006 not published; HACK008 AVAILABLE; request/response conflicting messages1
 - 1791598844 | deadline decision/HACK-010-1791597914/1791598814 | REVERSIBLE_AND_LOG | Option: Compact desktop typography with explicit line-height and spacing in owned feature CSS
+- 1791598861 | HACK-004 | Use canonical up/down signals capped at 0.5 and keep stock calculations local/deterministic | Why: HACK-002 is integrated; HACK-005 recordings validate ag
 
 Global next step: available P0; else review PRs, tests, demo, rehearsal.
 Why: bounded snapshot to resume without rereading history.
