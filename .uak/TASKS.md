@@ -32,11 +32,11 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Depends on:** None
 - **Uses contract:** None
 - **Related:** None
-- **Paths:** app/schemas/, app/fixtures/, web/DESIGN.md, app/tests/test_schemas.py
+- **Paths:** app/schemas/, app/fixtures/businesses/, web/DESIGN.md, app/tests/test_schemas.py
 - **Freeze-Allowed:** no
 - **Acceptance:**
   - Esquemas pydantic: Business, Product, SalesRecord, Signal, Forecast, Need, SupplierOffer, Proposal, Allocation (ver IDEA.md §6)
-  - Fixtures JSON con 4 negocios y ~90 días de ventas sintéticas con estacionalidad, cada registro con `demo_data: true`
+  - Fixtures JSON (en app/fixtures/businesses/) con 4 negocios y ~90 días de ventas sintéticas con estacionalidad, cada registro con `demo_data: true`
   - `web/DESIGN.md` con una dirección visual y tokens de color
   - `bash .uak/bin/smoke` exits 0
 - **Verify:** `uv run pytest -q app/tests/test_schemas.py`
