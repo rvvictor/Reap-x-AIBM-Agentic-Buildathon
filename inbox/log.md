@@ -366,3 +366,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 362 | 1791611849 | Javier-1 | task:HACK-001 | request | HACK-019 | .uak/bin/smoke-project
 - 363 | 1791612681 | Javier-1 | task:HACK-013 | request | HACK-019 | app/tests/test_pharmacy_fixture.py:27,59,126:
 - 364 | 1791613462 | Javier-1 | task:HACK-014 | approve | HACK-014 | Approved SHA 6e96359fafad5cdb2defa137c4d5b25be69accdb by Javier-1. Next: bash .uak/bin/uak heartbeat HACK-014 && bash .uak/bin/uak merge HACK-014
+- 365 | 1791613511 | Javier-1 | task:HACK-014 | approve | HACK-019 | 6e96359: router/service/test scope and criteria reviewed; uv run pytest -q app/tests/test_backtest.py PASS10 exit0 54s in detached SHA. Simulated walk-forward, previous-sales only, per-SKU units. Javier-2 may merge after gates.
