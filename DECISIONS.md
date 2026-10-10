@@ -10,3 +10,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791597532 | HACK-005 | Keep documented provisional Signal adapter pending HACK002 | Why: Canonical contract unavailable; demo works without model calls
 - 1791597724 | HACK-005 | Use exact local adapter until HACK-002 lands in main; retain source-bound checks and evidence-derived demo provenance | Why: Published HACK-002 contract is canonical but its branch is not integrated into HACK-005 ancestry
 - 1791597748 | HACK-005 | Keep HACK-005 in REVIEW pending independent review | Why: Verification green and branch pushed; independent reviewer must approve before integration
+- 1791597794 | HACK-003 | sin clave no hay checkout COMPLETED; DEMO_MODE lee las respuestas grabadas | Why: no hay .env ni REAP_API_KEY
