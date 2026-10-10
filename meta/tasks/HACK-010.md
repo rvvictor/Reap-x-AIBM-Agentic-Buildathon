@@ -1,5 +1,5 @@
 Task: HACK-010
-Events: 10
-Checkpoints: 3
+Events: 11
+Checkpoints: 4
 Sessions: 3
-Last-Checkpoint: 1791599131
+Last-Checkpoint: 1791600511

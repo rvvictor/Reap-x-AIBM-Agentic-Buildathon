@@ -9,9 +9,9 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791601831
-Updated: 1791599131
+Lease-Until: 1791603211
+Updated: 1791600511
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Resume when006 SHA published; test exact request against actual server; connect008 real approval/order endpoints; rerun checks and readyPR4
+Next: Human freeze exception: apply /tmp/hack010-integration-fix.patch; rerun real browser/build/smoke; independent review; connect008 when published. Preserve draft until criteria pass.
 PR: -
 Evidence: -
