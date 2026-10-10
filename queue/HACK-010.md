@@ -1,5 +1,5 @@
 ID: HACK-010
-State: MERGING
+State: HUMAN
 Owner: dylan-2
-Queued: 1791606521
-Reason: Waiting for queue
+Updated: 1791606526
+Reason: Missing verifiable approval on claims
