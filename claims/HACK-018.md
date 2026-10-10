@@ -12,6 +12,6 @@ Verify: `test -s docs/PITCH.md`
 Lease-Until: 1791624513
 Updated: 1791610113
 Task-Base: 93560fea4fa4723f9c6d47fca4c896eecaa552c8
-Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/16; run .uak/bin/smoke
+Next: Humano: Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/16
 Evidence: -
