@@ -196,3 +196,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 192 | 1791599435 | victor-2 | task:HACK-004 | approve | HACK-004 | Approved SHA df73cdc26f0b125a8c93b2a6f7c68c45d6e10e27 by victor-2. Next: bash .uak/bin/uak heartbeat HACK-004 && bash .uak/bin/uak merge HACK-004
 - 193 | 1791599441 | victor-2 | task:HACK-009 | approve | HACK-009 | Approved SHA 1d7a975690827efac43c29530151a61990984007 by victor-2. Next: bash .uak/bin/uak heartbeat HACK-009 && bash .uak/bin/uak merge HACK-009
 - 194 | 1791599447 | victor-2 | task:HACK-004 | reply | - | Aprobado df73cdc: pytest 19 OK, smoke PRODUCT_PASS, dentro de Paths. uak heartbeat HACK-004 && uak merge HACK-004
+- 195 | 1791599452 | victor-2 | task:HACK-009 | reply | - | Aprobado 1d7a975: build y smoke OK, estados loading/error/empty y demo_data presentes. No verifiqué 1280x720/390x844 (no está montado en App). uak merge HACK-009
