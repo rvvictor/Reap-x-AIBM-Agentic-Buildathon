@@ -30,7 +30,7 @@ Guion hablado en español, con pausas para señalar la pantalla. Objetivo: 3:00;
 
 ## 2:35–3:00 · Cierre
 
-«Bodega reúne predicción por producto, comparación del costo entregado y control individual sobre una compra compartida. La oportunidad es ayudar a pequeños negocios a decidir mejor y comprar juntos. Lo siguiente es validar la predicción con datos reales, conectar toda la experiencia y completar la prueba del sandbox. Hoy demostramos los cálculos y el flujo de control con datos simulados, dejando visible qué está probado y qué falta validar.»
+«Bodega reúne predicción por producto, ahorro compartido y control individual. Hoy demostramos cálculos y autorizaciones con datos simulados. El siguiente paso es validar con negocios reales, conectar toda la experiencia y completar la prueba del sandbox. Bodega ayuda a decidir mejor y comprar juntos.»
 
 ## Evidencia y límites para preguntas
 
