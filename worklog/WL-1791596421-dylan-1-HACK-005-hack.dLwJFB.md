@@ -6,7 +6,7 @@
 - Why: Previous approval did not cover null/scalar output defect
 - Failing: None
 - Commands: uv run pytest -q app/tests/test_signals.py; bash .uak/bin/smoke; git push origin feat/hack-005
-- Next: Independent re-review current PR2 SHA, then uak merge HACK-005
+- Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -27,3 +27,4 @@
 - 1791598116 | REVIEW | dylan-1 | heartbeat; lease until 1791612516
 - 1791598122 | REVIEW | dylan-2 | review; approve; SHA 301b1327fca9d7ce3755faefb81c92d43fb256a3; reviewer dylan-2
 - 1791598249 | REVIEW | dylan-1 | heartbeat; lease until 1791612649
+- 1791598259 | REVIEW | dylan-1 | merge rechazado; Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
