@@ -14,7 +14,7 @@ Envío: https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop
 | Team members | Fernando Vargas, Victor Ruiz, Sebastian Jara, Javier Reyna, Dylan Martinez |
 | Sponsor prize tracks (máx. 2) | Reap Most Worthwhile Problem |
 
-El track "Reap Best Bridge Onchain-Real World" **no** se elige: el proyecto no usa onchain (decisión del equipo pendiente de confirmar por Fernando).
+El track "Reap Best Bridge Onchain-Real World" **no** se elige: el equipo confirmó que aplica solo al Track 1.
 
 ## Descripción del proyecto (límite 5000 caracteres)
 **Bodega: stock objetivo dinámico por producto y compras en grupo más baratas para negocios pequeños.**
@@ -35,14 +35,21 @@ Bodega pone un agente local en cada negocio y un agente global que los coordina.
 **Stack.** FastAPI + React, servidor MCP entre agente local y global, Reap Agentic API, Claude para señales.
 
 ## Checklist de entrega
-> Los 9 puntos oficiales están en la página del evento (https://aibuilders.mx/reap) y **no están copiados en el repo**. Pega aquí el texto oficial y marca cada uno. Abajo, los requisitos que sí constan en `.uak/PROJECT.md`; marcar solo con evidencia.
+Los 9 puntos oficiales de https://aibuilders.mx/reap, más los pasos de envío. `[x]` = con evidencia o confirmado por el equipo; `[ ]` = falta confirmar.
 
-- [ ] Usa el Agentic module de Reap (búsqueda → cotización → checkout en sandbox) y es central al producto
-- [ ] Solo sandbox, sin dinero real, solo comercios soportados
-- [ ] No hay viajes, categorías restringidas ni scraping del checkout; ningún dato de tarjeta llega a un LLM
-- [ ] No es un chatbot genérico de buscar-mostrar-comprar
-- [x] Repo público/accesible enlazado (verificado: `gh repo view` → PUBLIC)
-- [ ] Video de demo de 1-2 min enlazado (con plan B `docs/demo-planb.mp4`)
-- [ ] Descripción ≤ 5000 caracteres pegada
-- [ ] Tracks elegidos (máx. 2)
+- [x] 1. Mi proyecto usa el Agentic module, con Reap API o con el wallet module (Reap Agentic API: `app/integrations/reap/`)
+- [x] 2. Los pagos agénticos son el centro del producto, no un extra (reparto de ahorro, autorización por negocio y checkout)
+- [x] 3. Todo corre en sandbox y no se mueve dinero real (README: solo sandbox; `DEMO_MODE` sin red)
+- [ ] 4. Solo uso merchants de la lista soportada (/merchants en el bot de Telegram): el proyecto parte del PDF de comercios soportados (Coffee & Tea, 17); **falta contrastar contra /merchants en Telegram**
+- [ ] 5. Mi equipo tiene un líder definido para recibir la API key por Telegram: capitán Fernando Vargas; **falta que confirme que ya la recibió**
+- [x] 6. No es una reserva de viaje ni una categoría restringida (café y granos)
+- [x] 7. No hago scraping del checkout ni le paso datos crudos de tarjeta a un LLM (el agente no ve datos de tarjeta; el LLM solo estructura señales)
+- [x] 8. No es un chatbot genérico de buscar, mostrar y comprar (predicción de stock + compra en grupo)
+- [x] 9. Sé a qué track aplico: **Track 1, Reap Most Worthwhile Problem** (confirmado por el equipo)
+
+Envío:
+- [x] Repo público enlazado (verificado: `gh repo view` → PUBLIC)
+- [ ] Video de demo de 1-2 min enlazado (plan B `docs/demo-planb.mp4`)
+- [x] Descripción ≤ 5000 caracteres (2713)
+- [x] Track elegido: solo Track 1
 - [ ] Enviado por Fernando Vargas antes de las 23:39
