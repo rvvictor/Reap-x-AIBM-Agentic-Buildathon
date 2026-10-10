@@ -92,7 +92,13 @@ bash .uak/bin/smoke             # ruff + pytest + web lint + web build
 
 ## Screenshots
 
-Pending: they must be captured from the running app once steps 3-5 are integrated. See `docs/DEMO.md`.
+Captured from the running app in `DEMO_MODE` (all figures are simulated, `demo_data: true`).
+Regenerate them with `BASE_URL=http://localhost:8000 uv run --with playwright python e2e/demo_flow.py`
+(restart the server first: demo state lives in memory).
+
+| Business inventory and forecast (1280x720) | Global agent, shared payment (1280x720) | Mobile (390x844) |
+|---|---|---|
+| ![Business](e2e/screens/1-negocio-1280x720.png) | ![Global agent](e2e/screens/2-agente-global-y-pago-1280x720.png) | ![Mobile](e2e/screens/3-movil-390x844.png) |
 
 ## Layout
 
