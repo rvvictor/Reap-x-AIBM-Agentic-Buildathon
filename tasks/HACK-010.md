@@ -15,7 +15,7 @@ Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Resume when006 SHA published; test exact request against actual server; connect008 real approval/order endpoints; rerun checks and readyPR4
 PR: -
 Evidence: -
-Events: 9
+Events: 10
 Checkpoints: 3
-Sessions: 2
+Sessions: 3
 Last-Checkpoint: 1791599131
