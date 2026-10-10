@@ -9,9 +9,9 @@ Priority: P0
 Paths: docs/SUBMISSION.md
 Depends: None
 Verify: `test -s docs/SUBMISSION.md`
-Lease-Until: 1791604443
-Updated: 1791601743
+Lease-Until: 1791604715
+Updated: 1791602015
 Task-Base: 83eca3623d11e90f5cd98681a5401ceca35c4407
-Next: Pegar los 9 puntos oficiales, enlace del video, marcar checklist y pasar a REVIEW
+Next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
 PR: -
 Evidence: -
