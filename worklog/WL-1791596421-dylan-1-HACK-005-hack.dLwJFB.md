@@ -1,12 +1,12 @@
 # worklog/WL-1791596421-dylan-1-HACK-005-hack.dLwJFB.md · HACK-005
 
 ## Live summary
-- Done: 01fd797 independently approved twice; additional cross-service integration HACK004 df73cdc + HACK005 canonical fixtures PASS:2 signals,32 products,12 affected,7 changed targets
-- Decision: Preserve human merge queue; ask kit owner to resolve scope gate. Coordinate actual HACK010 backend and payment integration without editing active owner files.
-- Why: Known unchanged Task-Base gate blocks inherited files. API browser interception does not prove actual006 endpoint integration.
-- Failing: No HACK005 code failures; main merge blocked by kit scope gate. HACK010 awaits006 endpoint and008 payment contract.
-- Commands: q uv run python /tmp/hack005-forecast-integration.py exit0 INTEGRATION_PASS; uak inbox/status/heartbeat; independent003 review rejected env loading
-- Next: Resolve kit-owner/human integration PR2;006 endpoint SHA and008 contract requested; dylan2 owns010 implementation
+- Done: 01fd797 approved by victor2/dylan2. Cross-service test: HACK004df73cdc +005:2signals,32products,12affected,7targets changed. Independent004 approved Verify19 smoke;010b5c16e6 client/demo pre-review green build smoke browser parser, no full approval.
+- Decision: Keep005 human scope merge queue; keep010 BLOCKED with active author dylan2; backend and payment requirements remain open
+- Why: Canonical Signal downstream verified. Real006 endpoint and008 authorization/orders are unavailable; mocks cannot complete integrated criteria.
+- Failing: Kit scope gate Task-Base includes inherited .env.example;010 depends006+008+CIuv fix.003 env config bug rejected and author correcting.
+- Commands: q uv run python /tmp/hack005-forecast-integration.py exit0; reviewers ran004 Verify/smoke and010 build/smoke/browser/parser; uak inbox/status/digest
+- Next: Kit owner/human integrates approved PR2; upon006 publication010 owner tests actual server and connects008 contract, then fresh review
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -47,3 +47,4 @@
 - 1791599205 | REVIEW | dylan-1 | heartbeat; lease until 1791613605
 - 1791599213 | REVIEW | dylan-1 | checkpoint; next: Human/owner resolve inherited Task-Base scope; merge PR2 approved01fd797 without widening signal edits
 - 1791599297 | REVIEW | dylan-1 | checkpoint; next: Resolve kit-owner/human integration PR2;006 endpoint SHA and008 contract requested; dylan2 owns010 implementation
+- 1791599486 | REVIEW | dylan-1 | checkpoint; next: Kit owner/human integrates approved PR2; upon006 publication010 owner tests actual server and connects008 contract, then fresh review
