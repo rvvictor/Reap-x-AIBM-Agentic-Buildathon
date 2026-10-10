@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/services/global_agent.py, app/routers/global_agent.py, app/tests/test_global_agent.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_global_agent.py`
-Lease-Until: 1791600600
-Updated: 1791597900
+Lease-Until: 1791600627
+Updated: 1791597927
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Coordinator confirms identity then contract/advisor plan review; implement three owned files only
+Next: Separate HACK-006 identity from HACK-004 then implement global agent against canonical contract
 PR: -
 Evidence: -
-Events: 3
-Checkpoints: 1
+Events: 4
+Checkpoints: 2
 Sessions: 3
-Last-Checkpoint: 1791597465
+Last-Checkpoint: 1791597927

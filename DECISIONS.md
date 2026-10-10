@@ -11,3 +11,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791597724 | HACK-005 | Use exact local adapter until HACK-002 lands in main; retain source-bound checks and evidence-derived demo provenance | Why: Published HACK-002 contract is canonical but its branch is not integrated into HACK-005 ancestry
 - 1791597748 | HACK-005 | Keep HACK-005 in REVIEW pending independent review | Why: Verification green and branch pushed; independent reviewer must approve before integration
 - 1791597794 | HACK-003 | sin clave no hay checkout COMPLETED; DEMO_MODE lee las respuestas grabadas | Why: no hay .env ni REAP_API_KEY
+- 1791597927 | HACK-006 | Resume HACK-006 here; preserve HACK-004 uncommitted forecast files | Why: Human requested recovery after terminal crash; duplicate sebastian-2 identity must be separated before concurrent execution
