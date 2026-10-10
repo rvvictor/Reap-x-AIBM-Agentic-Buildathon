@@ -15,7 +15,11 @@ export const offers: Offer[] = [
   { supplier: 'Ruta del Grano', unit_price: 230, shipping: 80, tax: 748.8, eta_days: 1, source: 'Fixture HACK-010 · oferta simulada' },
 ];
 export const quantity = 20;
-export const delivered = (offer: Offer) => quantity * offer.unit_price + offer.shipping + offer.tax;
+export const delivered = (offer: Offer, count = quantity) => count * offer.unit_price + offer.shipping + offer.tax;
+export const proposalRequest = {
+  needs: businesses.map(business => ({ business_id: business.id, sku_id: `${business.id}:grano`, product_name: 'Café en grano 250 g', category: 'cafe-grano', qty: 5, needed_by: '2026-10-11', accepted_equivalents: [] })),
+  offers: offers.map((offer, index) => ({ supplier: offer.supplier, product_id: `demo-coffee-${index}`, name: 'Café en grano 250 g', category: 'cafe-grano', unit_price: offer.unit_price, shipping: offer.shipping, tax: offer.tax, currency: 'MXN', eta_days: offer.eta_days, min_qty: 1, source: 'simulated', demo_data: true })),
+};
 export const money = (value: number, currency = 'MXN') => new Intl.NumberFormat('es-MX', { style: 'currency', currency, maximumFractionDigits: 2 }).format(value);
 export function sampleProposal(offer = offers[0]): Proposal {
   const total = delivered(offer);
@@ -36,4 +40,19 @@ export function parseProposals(value: unknown): Proposal[] {
     if (Math.abs(allocations.reduce((sum, allocation) => sum + allocation.cost, 0) - item.total) > 0.02 || Math.abs(allocations.reduce((sum, allocation) => sum + allocation.individual_cost, 0) - item.individual_total) > 0.02 || Math.abs(allocations.reduce((sum, allocation) => sum + allocation.savings, 0) - item.savings_total) > 0.02 || Math.abs(item.individual_total - item.total - item.savings_total) > 0.02) throw new Error('Los totales no coinciden con el reparto.');
     return item as Proposal;
   });
+}
+export function parseRequestedProposals(value: unknown): Proposal[] {
+  const results = parseProposals(value);
+  if (results.length > 1 || results.some(result => result.category !== 'cafe-grano' || !result.demo_data || result.currency !== 'MXN')) throw new Error('La respuesta no corresponde al pedido de ejemplo. Se detuvo la propuesta.');
+  for (const result of results) {
+    const offer = offers.find(item => item.supplier === result.supplier);
+    const count = result.allocations.reduce((sum, row) => sum + row.qty, 0);
+    const changedQuantity = result.allocations.some(row => {
+      const need = proposalRequest.needs.find(item => item.business_id === row.business_id && item.sku_id === row.sku_id);
+      const allocated = result.allocations.filter(item => item.business_id === row.business_id && item.sku_id === row.sku_id).reduce((sum, item) => sum + item.qty, 0);
+      return !need || allocated > need.qty;
+    });
+    if (!offer || Math.abs(delivered(offer, count) - result.total) > 0.02 || changedQuantity) throw new Error('El proveedor, el precio o las cantidades cambiaron. Se detuvo la propuesta.');
+  }
+  return results;
 }
