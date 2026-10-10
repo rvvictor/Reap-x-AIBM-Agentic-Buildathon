@@ -12,6 +12,6 @@ Verify: `uv run pytest -q app/tests/test_health.py`
 Lease-Until: 1791611787
 Updated: 1791597387
 Task-Base: 594f6a71052a486cace608fd1cac24e1a1c85252
-Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/1; run .uak/bin/smoke
+Next: Humano: Diff outside Paths: .gitignore (new test files: add the dir to Additive-Paths in PROJECT.md)
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/1
 Evidence: -

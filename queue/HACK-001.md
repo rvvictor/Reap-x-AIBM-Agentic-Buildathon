@@ -1,5 +1,5 @@
 ID: HACK-001
-State: MERGING
+State: HUMAN
 Owner: victor-1
-Queued: 1791597392
-Reason: Waiting for queue
+Updated: 1791597397
+Reason: Diff outside Paths: .gitignore (new test files: add the dir to Additive-Paths in PROJECT.md)
