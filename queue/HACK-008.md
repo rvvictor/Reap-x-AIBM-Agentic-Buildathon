@@ -1,5 +1,5 @@
 ID: HACK-008
-State: MERGING
+State: HUMAN
 Owner: fernando-2
-Queued: 1791602250
-Reason: Waiting for queue
+Updated: 1791602259
+Reason: Missing verifiable approval on claims
