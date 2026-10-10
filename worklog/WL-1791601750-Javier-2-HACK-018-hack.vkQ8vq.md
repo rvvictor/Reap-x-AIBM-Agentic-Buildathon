@@ -6,7 +6,7 @@
 - Why: Pitch and recording script grounded in actual code
 - Failing: -
 - Commands: q test -s docs/PITCH.md; q bash .uak/bin/smoke; diff --cached --check
-- Next: Humano: Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
+- Next: Integrated in main: 21998687d03334f215f917001905541798679c72 (recorded by sebastian-1)
 
 ## History
 - 1791601750 | CLAIMED | Javier-2 | claim; next: Preparar
@@ -21,3 +21,4 @@
 - 1791610085 | REVIEW | sebastian-2 | review; approve; SHA d5555472e39549c5b536ef4a61b216d164165b53; reviewer sebastian-2
 - 1791610113 | REVIEW | sebastian-1 | heartbeat; lease until 1791624513
 - 1791610121 | REVIEW | sebastian-1 | merge rechazado; Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
+- 1791610163 | INTEGRATED | sebastian-1 | integrate; recorded by sebastian-1; PR https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/16; merged 21998687d03334f215f917001905541798679c72; proof ancestry
