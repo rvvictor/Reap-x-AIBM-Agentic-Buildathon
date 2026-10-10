@@ -1,6 +1,6 @@
 # HACK-008
 ID: HACK-008
-State: CLAIMED
+State: REVIEW
 Owner: fernando-2
 Branch: feat/hack-008
 Worktree: /Users/FerV/Documents/REAP/Reap-x-AIBM-Agentic-Buildathon-wt/hack-008
@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/routers/payments.py, app/services/payments.py, web/src/features/checkout/, app/tests/test_payments.py
 Depends: HACK-003
 Verify: `uv run pytest -q app/tests/test_payments.py`
-Lease-Until: 1791604826
-Updated: 1791602126
+Lease-Until: 1791616610
+Updated: 1791602210
 Task-Base: a145e3350569b597e7615215ba1b1ad89a3b87df
-Next: Implementar el reparto interno y llamar al cliente de HACK-003
-PR: -
+Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/12; run .uak/bin/smoke
+PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/12
 Evidence: -
