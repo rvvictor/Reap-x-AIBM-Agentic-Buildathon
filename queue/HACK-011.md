@@ -1,5 +1,5 @@
 ID: HACK-011
-State: MERGING
+State: HUMAN
 Owner: victor-2
-Queued: 1791609516
-Reason: Waiting for queue
+Updated: 1791609520
+Reason: Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
