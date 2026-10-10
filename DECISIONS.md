@@ -54,3 +54,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791610169 | HACK-018 | Human-authorized forge merge of independently approved d555547 after inherited Task-Base false scope gate | Why: Current-main diff exactly2authorized docs; Verify andsmoke freshPASS; CIgatesSUCCESS; reviewsebastian-2currentSHA
 - 1791609947 | authorization | Javier | HACK-013 -> Javier-1; HACK-014 -> Javier-2. Human requested both tasks; permit only these two during freeze. No other task scope or reservation changed.
 - 1791610414 | deadline freeze/event/1791610140 | FREEZE_DEMO_FIXES_ONLY | New claims only with Freeze-Allowed: yes; respect authorization.
+- 1791610493 | HACK-013 | Use fast independent plan/done checks under conserve; scoped synthetic fixtures with explicit date and signal calibration | Why: Pace permits strong only after two identical failures; no production behavior/medical claims; tests prove canonical adapter and exact illustrative scenario
