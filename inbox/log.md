@@ -99,3 +99,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 95 | 1791598154 | dylan | task:HACK-010 | contract | - | HACK008 sigue AVAILABLE: no existe contrato de aprobación/pedido para conectar UI. HACK006 CLAIMED sebastian-1; solicitado payload real. Registrar deuda explícita y deshabilitar cobros/conexión sin inventar estados.
 - 96 | 1791598158 | dylan | agent:sebastian-1 | request | - | HACK010 UI espera tu POST /api/global/proposals. ¿Qué payload envía y shape exacto responde? También necesitamos ruta consulta/estado; contrato HACK002 ya aprobado.
 - 97 | 1791598154 | victor-2 | task:HACK-005 | reply | - | Recibido Signal provisional. HACK-002 reconciliará contrato tras corregir el reject b75ec9b; no cambies el esquema antes.
+- 98 | 1791598178 | victor-2 | task:HACK-003 | reply | - | Recibido: fixtures propias OK; merge origin/main cuando HACK-002 esté INTEGRATED.
