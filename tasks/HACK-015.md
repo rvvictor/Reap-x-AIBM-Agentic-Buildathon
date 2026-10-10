@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/services/policy.py, app/routers/policy.py, app/tests/test_policy.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_policy.py`
-Lease-Until: 1791613909
-Updated: 1791611209
+Lease-Until: 1791613932
+Updated: 1791611232
 Task-Base: 6dfc3ae4ea63d61e6ab826f8ac46e05c4eea89c7
 Next: Implementar las reglas como funciones puras con pruebas
 PR: -
 Evidence: -
-Events: 1
+Events: 2
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
