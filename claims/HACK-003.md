@@ -1,6 +1,6 @@
 # HACK-003
 ID: HACK-003
-State: CLAIMED
+State: REVIEW
 Owner: fernando-1
 Branch: feat/hack-003
 Worktree: /Users/FerV/Documents/REAP/Reap-x-AIBM-Agentic-Buildathon-wt/hack-003
@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/integrations/reap/, app/fixtures/reap/, app/tests/test_reap_client.py, docs/REAP-NOTES.md
 Depends: None
 Verify: `uv run pytest -q app/tests/test_reap_client.py`
-Lease-Until: 1791600938
-Updated: 1791598238
+Lease-Until: 1791612781
+Updated: 1791598381
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Poner REAP_API_KEY en .env del worktree y repetir search/quote/checkout; smoke cuando HACK-001 esté en main
-PR: -
+Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/5; run .uak/bin/smoke
+PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/5
 Evidence: -
