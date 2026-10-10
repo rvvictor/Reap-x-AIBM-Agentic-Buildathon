@@ -1,12 +1,12 @@
 # worklog/WL-1791596421-dylan-1-HACK-005-hack.dLwJFB.md · HACK-005
 
 ## Live summary
-- Done: PR2 01fd797 independently approved; shared Signal + canonical categories; Verify32passed and fresh PRODUCT_PASS
-- Decision: Preserve automatic human merge queue; do not bypass scope gate
-- Why: Inherited Task-Base includes HACK001 files; own current-main diff only five allowed signal paths
-- Failing: MERGE_HUMAN HACK005: Diff outside Paths .env.example
-- Commands: q uv run pytest -q app/tests/test_signals.py; q bash .uak/bin/smoke; uak merge HACK005; git diff --stat origin/main...HEAD
-- Next: Human/owner resolve inherited Task-Base scope; merge PR2 approved01fd797 without widening signal edits
+- Done: 01fd797 independently approved twice; additional cross-service integration HACK004 df73cdc + HACK005 canonical fixtures PASS:2 signals,32 products,12 affected,7 changed targets
+- Decision: Preserve human merge queue; ask kit owner to resolve scope gate. Coordinate actual HACK010 backend and payment integration without editing active owner files.
+- Why: Known unchanged Task-Base gate blocks inherited files. API browser interception does not prove actual006 endpoint integration.
+- Failing: No HACK005 code failures; main merge blocked by kit scope gate. HACK010 awaits006 endpoint and008 payment contract.
+- Commands: q uv run python /tmp/hack005-forecast-integration.py exit0 INTEGRATION_PASS; uak inbox/status/heartbeat; independent003 review rejected env loading
+- Next: Resolve kit-owner/human integration PR2;006 endpoint SHA and008 contract requested; dylan2 owns010 implementation
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -46,3 +46,4 @@
 - 1791599201 | REVIEW | dylan-1 | checkpoint; next: Human integration PR2 or kit-owner scope gate correction; await006 SHA for HACK010 real endpoint verification
 - 1791599205 | REVIEW | dylan-1 | heartbeat; lease until 1791613605
 - 1791599213 | REVIEW | dylan-1 | checkpoint; next: Human/owner resolve inherited Task-Base scope; merge PR2 approved01fd797 without widening signal edits
+- 1791599297 | REVIEW | dylan-1 | checkpoint; next: Resolve kit-owner/human integration PR2;006 endpoint SHA and008 contract requested; dylan2 owns010 implementation
