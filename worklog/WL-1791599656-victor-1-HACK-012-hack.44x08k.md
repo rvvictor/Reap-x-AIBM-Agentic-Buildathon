@@ -12,3 +12,4 @@
 - 1791599656 | CLAIMED | victor-1 | claim; next: Redactar docs/SUBMISSION.md desde IDEA.md
 - 1791600866 | CLAIMED | victor-1 | checkpoint; next: Pegar los 9 puntos oficiales, enlace del video, marcar checklist y pasar a REVIEW
 - 1791600871 | AVAILABLE | victor-1 | release; claim released by victor-1; reason: -; summary kept
+- 1791601743 | CLAIMED | Javier-1 | claim; next: Pegar los 9 puntos oficiales, enlace del video, marcar checklist y pasar a REVIEW
