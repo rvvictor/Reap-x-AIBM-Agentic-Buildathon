@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/global_agent.py, app/routers/global_agent.py, app/tests/test_global_agent.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_global_agent.py`
-Lease-Until: 1791600748
-Updated: 1791598048
+Lease-Until: 1791601247
+Updated: 1791598547
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Leer contrato HACK-002 publicado; consultar advisor; implementar agente global y probar Verify más smoke
+Next: Advisor done review then fresh main merge scope verification commit push small PR
 PR: -
 Evidence: -
