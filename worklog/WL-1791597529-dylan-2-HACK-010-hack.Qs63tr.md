@@ -1,12 +1,12 @@
 # worklog/WL-1791597529-dylan-2-HACK-010-hack.Qs63tr.md · HACK-010
 
 ## Live summary
-- Done: SHA4ab0cdb includes main61c9b21; qbuild exit0; qsmoke PRODUCT_PASS; owned global unchanged from7f2d278 approved independently+criticSHIP+advisorGOdemo; actual008browserPASS4authACTIVEreconciled4524GETremount; no livepayments
-- Decision: Preserve verifiedPR; await registered reviewer approval, then integrate010 only and stop
-- Why: uakmerge returned MERGE_HUMAN Missing verifiable approval on claims; independentlocalreview cannot be recorded using authoridentity; human reviewer-role permission pending.
-- Failing: MERGE_HUMAN HACK-010 Missing verifiable approval on claims. No code/testfailure. Livebackendcurrency/principal/idempotency excluded fromdemoUIapproval.
-- Commands: q build exit0; q smoke PRODUCT_PASS; verify_browser PASSdesktop696.2/mobile; verify_payments actualPASSfooter670/negativeguards; gh pr checks4 gatesPASS; uakmerge exit3
-- Next: Humano: Diff outside Paths: .github/workflows/uak.yml (new test files: add the dir to Additive-Paths in PROJECT.md)
+- Done: HACK008 integration implemented in global UI DEMO_MODE; SHA4ab0cdb PR4 clean. Build, smoke, browser, real proposal and actual DEMO payment flow PASS; CIgatesSUCCESS; victor-1 approval#313 currentSHA.
+- Decision: Finish only010; preserve approvedSHA and request human-queue integration, then pullmain and stop.
+- Why: Human authorized freeze correction and fetch/pullmain; no new tasks/claims. Rootmain fetched/pulled c47660d.
+- Failing: UAKmerge exit3 MERGE_HUMAN Diff outside Paths .github/workflows/uak.yml inherited from originalTaskBase; actual current-main feature diff only7globalfiles.
+- Commands: git fetch origin main; git pull --ff-only origin main; q build; q smoke; verify_browser.py; verify_real_api.py; verify_payments.py; uakmerge010 rejectedscopegate.
+- Next: Coordinator human-queue integration PR4 approved4ab; recordINTEGRATED, finalfetch/pullmain, stop without newclaims.
 
 ## History
 - 1791597529 | CLAIMED | dylan-2 | claim; next: Build global proposal UI with labeled fixtures and business approval; verify build and browser
@@ -33,3 +33,4 @@
 - 1791606972 | REVIEW | victor-1 | review; approve; SHA 4ab0cdb10ff03f5ebe9f39ec9afe4f2997f52f75; reviewer victor-1
 - 1791607059 | REVIEW | dylan-2 | heartbeat; lease until 1791621459
 - 1791607068 | REVIEW | dylan-2 | merge rechazado; Diff outside Paths: .github/workflows/uak.yml (new test files: add the dir to Additive-Paths in PROJECT.md)
+- 1791607117 | REVIEW | dylan-2 | checkpoint; next: Coordinator human-queue integration PR4 approved4ab; recordINTEGRATED, finalfetch/pullmain, stop without newclaims.

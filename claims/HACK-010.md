@@ -9,9 +9,9 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791621459
-Updated: 1791607059
+Lease-Until: 1791621517
+Updated: 1791607117
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Humano: Diff outside Paths: .github/workflows/uak.yml (new test files: add the dir to Additive-Paths in PROJECT.md)
+Next: Coordinator human-queue integration PR4 approved4ab; recordINTEGRATED, finalfetch/pullmain, stop without newclaims.
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/4
 Evidence: -
