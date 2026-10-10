@@ -9,13 +9,13 @@ Priority: P1
 Paths: web/src/features/settings/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791614019
-Updated: 1791611319
+Lease-Until: 1791614043
+Updated: 1791611343
 Task-Base: 6dfc3ae4ea63d61e6ab826f8ac46e05c4eea89c7
 Next: Crear el formulario con datos mock del contrato
 PR: -
 Evidence: -
-Events: 1
+Events: 2
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
