@@ -43,3 +43,5 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791602176 | HACK-018 | El humano cancelo todo el trabajo; liberar reserva sin cancelar el backlog. | Why: Cancelacion explicita de Javier.
 - 1791602542 | deadline decision/HACK-007-1791601616/1791602516 | REVERSIBLE_AND_LOG | Option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval; Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested; no money, accounts, publishing or scope expansion.
 - 1791602792 | deadline lease/HACK-011/1791602696 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
+- 1791605513 | deadline lease/HACK-007/1791603704 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
+- 1791605513 | deadline lease/HACK-010/1791604576 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
