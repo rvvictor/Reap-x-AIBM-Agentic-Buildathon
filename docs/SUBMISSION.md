@@ -1,7 +1,7 @@
 # Entrega en Gavel · Bodega
 
 Envío: https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop
-**Quién envía: Fernando Vargas (capitán).** Plazo oficial: 2026-10-09 21:00 CDMX · envío interno: 20:40.
+**Quién envía: Fernando Vargas (capitán).** Plazo oficial: 2026-10-09 23:59 CDMX · envío interno: 23:39.
 
 ## Campos del formulario (copiar y pegar)
 | Campo | Valor |
@@ -41,8 +41,8 @@ Bodega pone un agente local en cada negocio y un agente global que los coordina.
 - [ ] Solo sandbox, sin dinero real, solo comercios soportados
 - [ ] No hay viajes, categorías restringidas ni scraping del checkout; ningún dato de tarjeta llega a un LLM
 - [ ] No es un chatbot genérico de buscar-mostrar-comprar
-- [ ] Repo público/accesible enlazado
+- [x] Repo público/accesible enlazado (verificado: `gh repo view` → PUBLIC)
 - [ ] Video de demo de 1-2 min enlazado (con plan B `docs/demo-planb.mp4`)
 - [ ] Descripción ≤ 5000 caracteres pegada
 - [ ] Tracks elegidos (máx. 2)
-- [ ] Enviado por Fernando Vargas antes de las 20:40
+- [ ] Enviado por Fernando Vargas antes de las 23:39
