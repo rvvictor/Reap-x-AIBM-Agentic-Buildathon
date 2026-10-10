@@ -9,13 +9,13 @@ Priority: P0
 Paths: docs/SUBMISSION.md
 Depends: None
 Verify: `test -s docs/SUBMISSION.md`
-Lease-Until: 1791613912
-Updated: 1791611212
+Lease-Until: 1791614182
+Updated: 1791611482
 Task-Base: 83eca3623d11e90f5cd98681a5401ceca35c4407
-Next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
+Next: Next owner: preserve draft76f47ca; add https://bodega-axolutions.onrender.com as Projectlink, verify video access and correct unverified backtest/checkout claims before PR
 PR: -
 Evidence: -
-Events: 7
-Checkpoints: 2
+Events: 8
+Checkpoints: 3
 Sessions: 3
-Last-Checkpoint: 1791602015
+Last-Checkpoint: 1791611482

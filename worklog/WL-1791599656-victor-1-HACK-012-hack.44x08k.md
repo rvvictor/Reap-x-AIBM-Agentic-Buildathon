@@ -1,12 +1,12 @@
 # worklog/WL-1791599656-victor-1-HACK-012-hack.44x08k.md · HACK-012
 
 ## Live summary
-- Done: Reserva y borrador de Victor recuperados; main actualizado. Sin cambios locales al cancelar.
-- Decision: El humano cancelo el trabajo; liberar la tarea sin cancelar el backlog.
-- Why: Cancelacion explicita de Javier.
-- Failing: Faltan video y checklist final; no se declaro entrega completa.
-- Commands: git status --short: limpio; HEAD f31d778. Fuente oficial HTTP200 reportada por agente, sin evidencia reejecutada por coordinador.
-- Next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
+- Done: Recovered existing remote draft76f47ca via fast-forward; no source/doc edits made in this session. Render demoURL HTTP200; repoPUBLIC verified.
+- Decision: Human explicitly requested unclaim; preserve existing draft and release task
+- Why: User cancellation takes precedence; video still unpublished per human, no completed submission claimed
+- Failing: Missing published video URL and final verified checklist; existing draft has outdated backtest/sandbox assertions
+- Commands: git fetch origin main claims; wt new HACK-012; merge origin/feat/hack-012 fast-forward76f47ca; curl Render HTTP200; gh repo PUBLIC; git status clean
+- Next: Next owner: preserve draft76f47ca; add https://bodega-axolutions.onrender.com as Projectlink, verify video access and correct unverified backtest/checkout claims before PR
 
 ## History
 - 1791599656 | CLAIMED | victor-1 | claim; next: Redactar docs/SUBMISSION.md desde IDEA.md
@@ -16,3 +16,4 @@
 - 1791602015 | CLAIMED | Javier-1 | checkpoint; next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
 - 1791602092 | AVAILABLE | Javier-1 | release; claim released by Javier-1; reason: -; summary kept
 - 1791611212 | CLAIMED | sebastian-1 | claim; next: Retomar borrador de Victor; verificar 9 puntos y enlace del video antes de revision.
+- 1791611482 | CLAIMED | sebastian-1 | checkpoint; next: Next owner: preserve draft76f47ca; add https://bodega-axolutions.onrender.com as Projectlink, verify video access and correct unverified backtest/checkout claims before PR
