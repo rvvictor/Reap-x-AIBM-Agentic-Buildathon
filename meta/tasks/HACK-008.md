@@ -1,5 +1,5 @@
 Task: HACK-008
-Events: 11
+Events: 12
 Checkpoints: 0
 Sessions: 2
 Last-Checkpoint: 0
