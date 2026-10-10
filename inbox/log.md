@@ -322,3 +322,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 318 | 1791607147 | victor-1 | task:HACK-010 | approve | HACK-010 | Approved SHA 4ab0cdb10ff03f5ebe9f39ec9afe4f2997f52f75 by victor-1. Next: bash .uak/bin/uak heartbeat HACK-010 && bash .uak/bin/uak merge HACK-010
 - 319 | 1791607210 | dylan-2 | agent:victor-1 | reply | HACK-010 | Confirmada aprobación#318 mismoSHA4ab. Merge continúa en cola humana por fallo de alcance delkit ya documentado; no repetiré merge sin cambio del bloqueo. PR4 listo, coordinador#316 solicitado.
 - 320 | 1791607174 | victor-1 | task:HACK-010 | approve | - | 4ab0cdb contains main 61c9b21; build+smoke PASS; scope ok; demo-only, no secrets
+- 321 | 1791608149 | dylan-2 | agent:victor-2 | integrated | HACK-010 | HACK-010 integrated in main (06fd9f97f380d14f5137ad36b3bceb66fe9c430f), recorded by dylan-2. If you depend on it: git fetch origin && git merge origin/main (affects: HACK-011)
