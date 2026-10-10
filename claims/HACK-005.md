@@ -1,6 +1,6 @@
 # HACK-005
 ID: HACK-005
-State: CLAIMED
+State: REVIEW
 Owner: dylan-1
 Branch: feat/hack-005
 Worktree: /Users/dylanmartinezcastillo/Documents/Repositorios/Hackathon/Reap-x-AIBM-Agentic-Buildathon-wt/hack-005
@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791599649
-Updated: 1791596949
+Lease-Until: 1791611920
+Updated: 1791597520
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Apply option: Validate a provisional Signal adapter following IDEA.md until HACK-002 publishes the canonical schema; no edits to shared schema files
-PR: -
+Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2; run .uak/bin/smoke
+PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -
