@@ -1,6 +1,6 @@
 # HACK-012
 ID: HACK-012
-State: CLAIMED
+State: AVAILABLE
 Owner: sebastian-1
 Branch: feat/hack-012
 Worktree: /Users/sebastian/Desktop/Reap-x-AIBM-Agentic-Buildathon-wt/hack-012
@@ -9,13 +9,13 @@ Priority: P0
 Paths: docs/SUBMISSION.md
 Depends: None
 Verify: `test -s docs/SUBMISSION.md`
-Lease-Until: 1791614182
-Updated: 1791611482
+Lease-Until: 0
+Updated: 1791611489
 Task-Base: 83eca3623d11e90f5cd98681a5401ceca35c4407
 Next: Next owner: preserve draft76f47ca; add https://bodega-axolutions.onrender.com as Projectlink, verify video access and correct unverified backtest/checkout claims before PR
 PR: -
 Evidence: -
-Events: 8
+Events: 9
 Checkpoints: 3
 Sessions: 3
 Last-Checkpoint: 1791611482
