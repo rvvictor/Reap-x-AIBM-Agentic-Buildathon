@@ -56,3 +56,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791610414 | deadline freeze/event/1791610140 | FREEZE_DEMO_FIXES_ONLY | New claims only with Freeze-Allowed: yes; respect authorization.
 - 1791610493 | HACK-013 | Use fast independent plan/done checks under conserve; scoped synthetic fixtures with explicit date and signal calibration | Why: Pace permits strong only after two identical failures; no production behavior/medical claims; tests prove canonical adapter and exact illustrative scenario
 - 1791610762 | HACK-013 | Add binding budget caps0/12000 tests; keep all production modules unchanged | Why: Independent review requested active budget proof beyond nonbinding10000MXN fixture
+- 1791610795 | HACK-013 | Calibrated synthetic pharmacy scenario uses unchanged canonical engine/router and explicit businessbudget | Why: Generalization demonstrated without production edits or measuredaccuracy claims
