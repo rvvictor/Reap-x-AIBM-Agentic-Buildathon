@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791612124
-Updated: 1791597724
+Lease-Until: 1791612148
+Updated: 1791597748
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Update PR2 body, commit/push and notify reviewer of SHA
+Next: Wait for PR2 review; integrate only after approval
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -
