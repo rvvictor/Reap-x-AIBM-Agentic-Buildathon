@@ -1,12 +1,12 @@
 # worklog/WL-1791597529-dylan-2-HACK-010-hack.Qs63tr.md · HACK-010
 
 ## Live summary
-- Done: Verify build exit0; smoke PRODUCT_PASS; actual server DEMO_MODE 4 authorizations EXTERNAL ACTIVE checkout reconciled4524 GET/remountPASS; negative aborted singlePOST/configfalsezeroownwritesPASS; desktopfooter670/mobilePASS; criticSHIP advisorGO; no livepaymentapproval
-- Decision: Finish only010, no new claims; adapt payment UI only to real008 source after publication
-- Why: Human directly authorized freezefix and exclusive010.008 ownerfernando2 replaced tentativeplans withledgers; not invent data or criterioncompletion.
-- Failing: 008 source still unpublished; exact Ledger/Order/enrollment schema unavailable. Pending own payments adapter currently local/unpublished and must be replaced; no fullapproval.
-- Commands: q build exit0; q smoke PRODUCTPASS; verify_browser.py PASS; verify_real_api.py PASS; ls-remote feat/hack008 empty
-- Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/4; run .uak/bin/smoke
+- Done: PR4 final7f2d278 ready. Canonical request+Ledger008 integratedserver demo4authACTIVEorder4524GETremountPASS; ownbrowserdesktop/mobilePASS; statusP1fixed; criticSHIP; advisorGOdemo; independentreviewAPPROVEfinalSHA.
+- Decision: Integrate only010 after recorded independentapproval and CIgreen; then stop, no moreclaims/tasks
+- Why: Human authorized freeze correction and scope restricted to finishing010. UI state comes fromserverdemo, no livepaymentsapproval.
+- Failing: Await UAK recordedreview and mergegate for7f2d278; backendlive findings remain outsideverifieddemo UI
+- Commands: q build exit0; q smoke PRODUCT_PASS; verify_browser PASSfooter696.2; verify_payments actualPASSfooter670/negativechecks; independentVerifybuildPASS
+- Next: Record independentapproval SHA7f2d278; gatesgreen thenuakmerge010; pullmain toverifyintegration; stop withoutclaiminganother task.
 
 ## History
 - 1791597529 | CLAIMED | dylan-2 | claim; next: Build global proposal UI with labeled fixtures and business approval; verify build and browser
@@ -25,3 +25,4 @@
 - 1791601876 | CLAIMED | dylan-2 | checkpoint; next: Fetch published008SHA; adapt global/payments.tsx toactualmodels; real integratedauthorizationorderbrowser; independent design/security/review; publish finalSHA and integrate010 only.
 - 1791606046 | CLAIMED | dylan-2 | heartbeat; lease until 1791608746
 - 1791606417 | REVIEW | dylan-2 | done; PR https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/4; evidence: Verify build exit0; smoke PRODUCT_PASS; actual server DEMO_MODE 4 authorizations EXTERNAL ACTIVE checkout reconciled4524 GET/remountPASS; negative aborted singlePOST/configfalsezeroownwritesPASS; desktopfooter670/mobilePASS; criticSHIP advisorGO; no livepaymentapproval; reviewer: -
+- 1791606463 | REVIEW | dylan-2 | checkpoint; next: Record independentapproval SHA7f2d278; gatesgreen thenuakmerge010; pullmain toverifyintegration; stop withoutclaiminganother task.
