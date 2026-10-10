@@ -40,8 +40,8 @@ Los 9 puntos oficiales de https://aibuilders.mx/reap, más los pasos de envío. 
 - [x] 1. Mi proyecto usa el Agentic module, con Reap API o con el wallet module (Reap Agentic API: `app/integrations/reap/`)
 - [x] 2. Los pagos agénticos son el centro del producto, no un extra (reparto de ahorro, autorización por negocio y checkout)
 - [x] 3. Todo corre en sandbox y no se mueve dinero real (README: solo sandbox; `DEMO_MODE` sin red)
-- [ ] 4. Solo uso merchants de la lista soportada (/merchants en el bot de Telegram): el proyecto parte del PDF de comercios soportados (Coffee & Tea, 17); **falta contrastar contra /merchants en Telegram**
-- [ ] 5. Mi equipo tiene un líder definido para recibir la API key por Telegram: capitán Fernando Vargas; **falta que confirme que ya la recibió**
+- [x] 4. Solo uso merchants de la lista soportada (/merchants en el bot de Telegram): la lista del bot es el PDF de comercios soportados del que parte el proyecto (Coffee & Tea, 17); confirmado por el equipo
+- [x] 5. Mi equipo tiene un líder definido para recibir la API key por Telegram: capitán Fernando Vargas, quien ya revisó la API key (confirmado por el equipo)
 - [x] 6. No es una reserva de viaje ni una categoría restringida (café y granos)
 - [x] 7. No hago scraping del checkout ni le paso datos crudos de tarjeta a un LLM (el agente no ve datos de tarjeta; el LLM solo estructura señales)
 - [x] 8. No es un chatbot genérico de buscar, mostrar y comprar (predicción de stock + compra en grupo)
