@@ -11,3 +11,4 @@
 ## History
 - 1791611319 | CLAIMED | fernando-2 | claim; next: Crear el formulario con datos mock del contrato
 - 1791611343 | CLAIMED | fernando-2 | heartbeat; lease until 1791614043
+- 1791611479 | CLAIMED | fernando-2 | heartbeat; lease until 1791614179
