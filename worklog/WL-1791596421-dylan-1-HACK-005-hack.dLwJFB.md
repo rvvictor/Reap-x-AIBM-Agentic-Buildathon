@@ -1,12 +1,12 @@
 # worklog/WL-1791596421-dylan-1-HACK-005-hack.dLwJFB.md · HACK-005
 
 ## Live summary
-- Done: 01fd797 approved by victor2/dylan2. Cross-service test: HACK004df73cdc +005:2signals,32products,12affected,7targets changed. Independent004 approved Verify19 smoke;010b5c16e6 client/demo pre-review green build smoke browser parser, no full approval.
-- Decision: Keep005 human scope merge queue; keep010 BLOCKED with active author dylan2; backend and payment requirements remain open
-- Why: Canonical Signal downstream verified. Real006 endpoint and008 authorization/orders are unavailable; mocks cannot complete integrated criteria.
-- Failing: Kit scope gate Task-Base includes inherited .env.example;010 depends006+008+CIuv fix.003 env config bug rejected and author correcting.
-- Commands: q uv run python /tmp/hack005-forecast-integration.py exit0; reviewers ran004 Verify/smoke and010 build/smoke/browser/parser; uak inbox/status/digest
-- Next: Kit owner/human integrates approved PR2; upon006 publication010 owner tests actual server and connects008 contract, then fresh review
+- Done: 01fd797 canonical Signal approved twice; integration004+005 PASS 12affected/32products and7targets changed.010b5c16e6 client/demo independent build/smoke/browser/parser PASS; CI setup-uv landed mainbc3dbd1.003dotenv fix1b4b92b re-reviewed approve Verify6 smoke.
+- Decision: Preserve human integration queue for005 scope gate and current freeze; keep010 pending actual006/008 criteria with author dylan2
+- Why: No safe way to finish backend/payment integrations before published contracts. Client mocks satisfy only demo subset.
+- Failing: 005 gate inherited .env.example from Task-Base;010 missing006 real server and008 approvals/orders; CI rerun unverified.
+- Commands: q uv run python /tmp/hack005-forecast-integration.py; independent003/004Verify smoke;010build smoke browser parser; git fetch origin; uak status inbox
+- Next: Kit owner/human resolves005 merge queue; dylan2 integrates published006 and008 plus CI rerun subject to freeze rules; no unresolved005 code failures
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -49,3 +49,4 @@
 - 1791599297 | REVIEW | dylan-1 | checkpoint; next: Resolve kit-owner/human integration PR2;006 endpoint SHA and008 contract requested; dylan2 owns010 implementation
 - 1791599486 | REVIEW | dylan-1 | checkpoint; next: Kit owner/human integrates approved PR2; upon006 publication010 owner tests actual server and connects008 contract, then fresh review
 - 1791599491 | REVIEW | dylan-1 | heartbeat; lease until 1791613891
+- 1791599565 | REVIEW | dylan-1 | checkpoint; next: Kit owner/human resolves005 merge queue; dylan2 integrates published006 and008 plus CI rerun subject to freeze rules; no unresolved005 code failures

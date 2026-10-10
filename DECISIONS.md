@@ -29,3 +29,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791599486 | HACK-005 | Keep005 human scope merge queue; keep010 BLOCKED with active author dylan2; backend and payment requirements remain open | Why: Canonical Signal downstream verified. Real006 endpoint and008 authorization/orders are unavailable; mocks cannot complete integrated criteria.
 - 1791599491 | deadline freeze/event/1791599456 | FREEZE_DEMO_FIXES_ONLY | New claims only with Freeze-Allowed: yes; respect authorization.
 - 1791599524 | HACK-003 | no publicar contrato de pago desde HACK-003 | Why: HACK-008 no está reclamada aquí
+- 1791599565 | HACK-005 | Preserve human integration queue for005 scope gate and current freeze; keep010 pending actual006/008 criteria with author dylan2 | Why: No safe way to finish backend/payment integrations before published contracts. Client mocks satisfy only demo subset.

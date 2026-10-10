@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791613891
-Updated: 1791599491
+Lease-Until: 1791613965
+Updated: 1791599565
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Kit owner/human integrates approved PR2; upon006 publication010 owner tests actual server and connects008 contract, then fresh review
+Next: Kit owner/human resolves005 merge queue; dylan2 integrates published006 and008 plus CI rerun subject to freeze rules; no unresolved005 code failures
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -
