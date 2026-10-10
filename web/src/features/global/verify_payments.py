@@ -39,6 +39,7 @@ with sync_playwright() as p:
  assert ledger['demo_data'] and ledger['final_amount']==ledger['authorized_total']==proposal['total'],ledger
  assert ledger['order_id'] and all(row['approved'] for row in ledger['shares'])
  expect(section.locator('.payment-order')).to_have_count(4)
+ expect(section.locator('.savings-status')).to_contain_text('Pagada según API')
  expect(section.get_by_role('button',name='Enviar checkout demo',include_hidden=True)).to_be_disabled()
  section.get_by_role('button',name='Consultar pedido').click()
  endpoint=f"http://127.0.0.1:{os.environ['UAK_PORT']}/api/payments/ledgers/{proposal['id']}"
@@ -55,6 +56,7 @@ with sync_playwright() as p:
  # A remount must read the stored result, and must not enable another charge.
  section.get_by_role('button',name='Recalcular propuesta').click()
  expect(section.locator('.payment-order')).to_have_count(4)
+ expect(section.locator('.savings-status')).to_contain_text('Pagada según API')
  expect(section.get_by_role('button',name='Enviar checkout demo',include_hidden=True)).to_be_disabled()
  # Client-only ambiguous-outcome regression, separate from the real flow above.
  ambiguous=browser.new_page(viewport={'width':1280,'height':720},reduced_motion='reduce')

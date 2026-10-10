@@ -30,7 +30,7 @@ function parseEnrollment(value: unknown): Enrollment {
 }
 const statusNames: Record<Ledger['status'], string> = { awaiting_approval: 'Pendiente de autorización', ready: 'Todos autorizaron', needs_approval: 'Requiere nueva aprobación', reconciled: 'Pedido conciliado' };
 
-export default function PaymentControls({ proposal }: { proposal: Proposal }) {
+export default function PaymentControls({ proposal, onOrderStatus }: { proposal: Proposal; onOrderStatus: (status: Proposal['status']) => void }) {
   const [ledger, setLedger] = useState<Ledger | null>(null);
   const [enrollment, setEnrollment] = useState<Enrollment | null>(null);
   const [email, setEmail] = useState('');
@@ -60,9 +60,15 @@ export default function PaymentControls({ proposal }: { proposal: Proposal }) {
     catch (cause) { if (valid(token)) setError(cause instanceof Error ? cause.message : 'No se pudo actualizar el pedido.'); }
     finally { lock.current = false; if (valid(token)) setBusy(false); }
   }
+  function acceptLedger(next: Ledger, token: number) {
+    if (!valid(token)) return;
+    setLedger(next);
+    const reconciled = next.status === 'reconciled' && !!next.order_id && next.final_amount !== null && Math.round(next.final_amount * 100) === Math.round(proposal.total * 100);
+    onOrderStatus(reconciled ? 'paid' : next.status === 'needs_approval' || next.status === 'reconciled' ? 'stopped' : next.status === 'ready' && next.shares.every(row => row.approved) ? 'approved' : 'pending_approval');
+  }
   async function read(token: number) {
     const next = parseLedger(await request(`/ledgers/${encodeURIComponent(proposal.id)}`, token), proposal);
-    if (valid(token)) setLedger(next);
+    acceptLedger(next, token);
     return next;
   }
   useEffect(() => {
@@ -73,7 +79,7 @@ export default function PaymentControls({ proposal }: { proposal: Proposal }) {
   async function approve(id: string) {
     await run(async token => {
       const next = parseLedger(await request(`/ledgers/${encodeURIComponent(proposal.id)}/authorizations`, token, { business_id: id }, id), proposal);
-      if (valid(token)) setLedger(next);
+      acceptLedger(next, token);
     });
   }
   async function enroll() {
@@ -102,7 +108,7 @@ export default function PaymentControls({ proposal }: { proposal: Proposal }) {
       // The HACK-008 fixture variant is used only behind the DEMO_MODE write guard.
       try {
         const next = parseLedger(await request('/checkouts', token, { proposal_id: proposal.id, enrollment_id: enrollment.id, variant_id: '3c90c3cc-0d44-4b50-8888-8dd25736052a', email, return_url: returnUrl } ), proposal);
-        if (valid(token)) setLedger(next);
+        acceptLedger(next, token);
       } finally { if (valid(token)) await read(token); }
     });
   }
@@ -113,7 +119,7 @@ export default function PaymentControls({ proposal }: { proposal: Proposal }) {
   return <>
     <div className="panel-title"><h2>Cada dueño tiene la última palabra</h2><span className="muted">{approvedCount}/{ids.length || proposal.allocations.length} · estado de API</span></div>
     {error && <div role="alert" className="global-error">{error}</div>}
-    {!ledger ? <button className="secondary-button" disabled={busy || attempted} onClick={() => void run(async token => { const next = parseLedger(await request('/ledgers', token, { proposal_id: proposal.id }), proposal); if (valid(token)) setLedger(next); })}>{busy ? 'Preparando…' : 'Preparar autorizaciones demo'}</button> : <>
+    {!ledger ? <button className="secondary-button" disabled={busy || attempted} onClick={() => void run(async token => { const next = parseLedger(await request('/ledgers', token, { proposal_id: proposal.id }), proposal); acceptLedger(next, token); })}>{busy ? 'Preparando…' : 'Preparar autorizaciones demo'}</button> : <>
       <div className="business-list">{ids.map(id => {
         const business = businesses.find(row => row.id === id);
         const rows = ledger.shares.filter(row => row.business_id === id);
