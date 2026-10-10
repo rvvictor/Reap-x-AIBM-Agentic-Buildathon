@@ -1,0 +1,14 @@
+node_modules
+web/node_modules
+web/dist
+.venv
+.git
+.env
+.env.*
+!.env.example
+*.pdf
+__pycache__
+e2e
+ideaprimaria
+.uak
+.claude
