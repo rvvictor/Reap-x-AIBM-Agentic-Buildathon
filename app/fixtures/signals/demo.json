@@ -1,0 +1,16 @@
+{
+  "demo_data": true,
+  "request": {
+    "categories": ["cafe-grano", "filtros-cafe", "vasos-desechables"],
+    "sources": [
+      {"source": "demo:clima-frio", "kind": "weather", "text": "Escenario simulado: descenso de temperatura; mayor demanda de bebidas calientes.", "valid_from": "2026-10-09", "valid_to": "2026-10-16", "demo_data": true},
+      {"source": "demo:evento-cafeterias", "kind": "event", "text": "Escenario simulado: evento local cerca de cuatro cafeterías.", "valid_from": "2026-10-09", "valid_to": "2026-10-12", "demo_data": true}
+    ]
+  },
+  "response": {
+    "signals": [
+      {"id": "demo-cold-coffee", "kind": "weather", "description": "El frío eleva la demanda de bebidas calientes.", "categories": ["cafe-grano", "filtros-cafe"], "direction": "up", "magnitude": 0.25, "source": "demo:clima-frio", "valid_from": "2026-10-09", "valid_to": "2026-10-16", "demo_data": true},
+      {"id": "demo-event-cups", "kind": "event", "description": "El evento local aumenta la demanda de café y vasos.", "categories": ["cafe-grano", "vasos-desechables"], "direction": "up", "magnitude": 0.15, "source": "demo:evento-cafeterias", "valid_from": "2026-10-09", "valid_to": "2026-10-12", "demo_data": true}
+    ]
+  }
+}
