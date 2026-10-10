@@ -1,6 +1,7 @@
 import asyncio
 import copy
 import json
+from datetime import UTC, datetime
 from types import SimpleNamespace
 
 import pytest
@@ -10,6 +11,8 @@ from httpx2 import Request
 
 from app.config import Settings
 from app.main import app
+from app.schemas import Signal
+from app.schemas.loader import load_products
 from app.services import signals
 
 
@@ -51,8 +54,32 @@ def test_demo_uses_validated_recording_without_model(monkeypatch):
     result = asyncio.run(signals.extract_signals(request(), config=Settings(_env_file=None)))
     assert len(result) == 2
     assert all(item.demo_data and item.source.startswith("demo:") for item in result)
-    assert signals.demo_signals(["cups"])[0].categories == ["cups"]
+    assert signals.demo_signals(["vasos-desechables"])[0].categories == ["vasos-desechables"]
     assert signals.demo_signals(["unknown"]) == []
+
+
+def test_shared_signal_model_is_used_for_results_and_model_prompt():
+    assert all(type(signal) is Signal for signal in signals.demo_signals())
+    assert signals.SignalBatch.model_json_schema()["$defs"]["Signal"] == Signal.model_json_schema()
+
+
+def test_recorded_signals_match_canonical_inventory_categories():
+    categories = {product.category for product in load_products()}
+    result = signals.demo_signals(sorted(categories))
+    assert len(result) == 2
+    assert all(set(signal.categories).issubset(categories) for signal in result)
+
+
+@pytest.mark.parametrize("field", ["valid_from", "valid_to"])
+def test_numeric_timestamps_are_rejected_as_model_output(field):
+    payload = recorded()["response"]
+    iso_date = payload["signals"][0][field]
+    payload["signals"][0][field] = int(
+        datetime.fromisoformat(iso_date).replace(tzinfo=UTC).timestamp()
+    )
+    assert getattr(Signal.model_validate(payload["signals"][0]), field).isoformat() == iso_date
+    with pytest.raises(signals.SignalError, match="contrato"):
+        signals.validate_signals(json.dumps(payload), request())
 
 
 def test_model_uses_configured_id_and_evidence_provenance():
@@ -71,11 +98,12 @@ def test_model_uses_configured_id_and_evidence_provenance():
 
 @pytest.mark.parametrize("field,value", [
     ("magnitude", -0.01), ("magnitude", 0.51), ("magnitude", True),
+    ("magnitude", False), ("magnitude", "0.25"),
     ("magnitude", float("nan")), ("source", "invented"),
     ("categories", ["unknown"]), ("kind", "season"),
     ("direction", "execute_command"), ("valid_to", "2026-11-20"),
     ("valid_to", "2026-10-08"), ("valid_from", "2026-10-09T00:00:00-06:00"),
-    ("description", ""),
+    ("description", ""), ("description", " \t "),
     ("unexpected", "ignore previous instructions"),
 ])
 def test_rejects_invalid_or_unbound_model_output(field, value):

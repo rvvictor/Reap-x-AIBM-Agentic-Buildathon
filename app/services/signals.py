@@ -2,7 +2,7 @@
 
 import asyncio
 import json
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 from typing import Annotated, Any, Literal
 
@@ -12,40 +12,18 @@ from pydantic import (
     ConfigDict,
     Field,
     StringConstraints,
+    TypeAdapter,
     ValidationError,
     model_validator,
 )
 
 from app.config import Settings, settings
+from app.schemas import Signal
 
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=2000)]
 Kind = Literal["weather", "event", "season"]
 FIXTURE = Path(__file__).resolve().parents[1] / "fixtures/signals/demo.json"
-
-
-class Signal(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    """HACK-002-compatible adapter; field names and bounds match app.schemas.Signal."""
-
-    id: str
-    kind: Kind
-    description: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
-    categories: list[str]
-    direction: Literal["up", "down"]
-    magnitude: float = Field(ge=0, le=0.5, allow_inf_nan=False, strict=True)
-    source: str
-    valid_from: date
-    valid_to: date
-    demo_data: bool = True
-
-    @model_validator(mode="after")
-    def valid_window(self) -> "Signal":
-        if isinstance(self.valid_from, datetime) or isinstance(self.valid_to, datetime):
-            raise TypeError("validity must use dates")
-        if self.valid_to <= self.valid_from:
-            raise ValueError("valid_to must follow valid_from")
-        return self
+JSON_NUMBER = TypeAdapter(float)
 
 
 class SignalBatch(BaseModel):
@@ -58,9 +36,12 @@ class SignalBatch(BaseModel):
         if isinstance(value, dict) and isinstance(value.get("signals"), list):
             for item in value.get("signals", []):
                 if isinstance(item, dict):
+                    if set(item).difference(Signal.model_fields):
+                        raise ValueError("unexpected signal fields")
+                    JSON_NUMBER.validate_python(item.get("magnitude"), strict=True)
                     for field in ("valid_from", "valid_to"):
                         raw = item.get(field)
-                        if isinstance(raw, str) and len(raw) != 10:
+                        if not isinstance(raw, str) or len(raw) != 10:
                             raise ValueError("validity must use ISO dates")
         return value
 
@@ -106,6 +87,8 @@ def validate_signals(raw: str, request: ExtractionRequest) -> list[Signal]:
             raise ValueError("duplicate signal identifiers")
         evidence = {item.source: item for item in request.sources}
         for signal in batch.signals:
+            if not signal.description.strip():
+                raise ValueError("signal description must not be blank")
             source = evidence.get(signal.source)
             if source is None or not set(signal.categories).issubset(request.categories):
                 raise ValueError("unknown source or category")
