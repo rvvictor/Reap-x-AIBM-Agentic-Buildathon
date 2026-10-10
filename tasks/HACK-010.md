@@ -15,7 +15,7 @@ Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Human freeze exception: apply /tmp/hack010-integration-fix.patch; rerun real browser/build/smoke; independent review; connect008 when published. Preserve draft until criteria pass.
 PR: -
 Evidence: -
-Events: 11
+Events: 12
 Checkpoints: 4
 Sessions: 3
 Last-Checkpoint: 1791600511
