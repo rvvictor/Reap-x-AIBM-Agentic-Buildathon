@@ -98,6 +98,27 @@ def test_rejects_non_json_duplicate_ids_and_oversized_output():
         signals.validate_signals(json.dumps(payload), request())
 
 
+@pytest.mark.parametrize("value", [None, 42, True, "invalid", {}])
+def test_rejects_non_list_signals_with_safe_route_error(monkeypatch, value):
+    from app.routers import signals as routes
+
+    payload = {"signals": value}
+    with pytest.raises(signals.SignalError, match="contrato"):
+        signals.validate_signals(json.dumps(payload), request())
+
+    async def fake_live(request):
+        return await signals.extract_signals(
+            request, config=live_config(), client=FakeClient(payload=payload)
+        )
+
+    monkeypatch.setattr(routes, "extract_signals", fake_live)
+    response = TestClient(app, raise_server_exceptions=False).post(
+        "/api/signals/extract", json=recorded()["request"]
+    )
+    assert response.status_code == 502
+    assert response.json() == {"detail": "La respuesta no cumple el contrato de señales y fuentes."}
+
+
 def test_rejects_truncation_and_missing_live_configuration():
     with pytest.raises(signals.SignalError, match="completó"):
         asyncio.run(signals.extract_signals(request(), config=live_config(), client=FakeClient(stop_reason="max_tokens")))

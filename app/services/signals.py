@@ -55,7 +55,7 @@ class SignalBatch(BaseModel):
     @model_validator(mode="before")
     @classmethod
     def require_date_only(cls, value: Any) -> Any:
-        if isinstance(value, dict):
+        if isinstance(value, dict) and isinstance(value.get("signals"), list):
             for item in value.get("signals", []):
                 if isinstance(item, dict):
                     for field in ("valid_from", "valid_to"):
