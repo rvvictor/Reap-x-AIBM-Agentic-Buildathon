@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791599585
-Updated: 1791596885
+Lease-Until: 1791599649
+Updated: 1791596949
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Open stacked draft PR, wait for HACK-001 integration and HACK-002 contract; resume Claude after local login
+Next: After local Claude login, read PR2; wait for HACK-001 integration, change base to main, reconcile HACK-002 Signal contract and run uak-ship
 PR: -
 Evidence: -
-Events: 5
-Checkpoints: 1
+Events: 6
+Checkpoints: 2
 Sessions: 1
-Last-Checkpoint: 1791596885
+Last-Checkpoint: 1791596949
