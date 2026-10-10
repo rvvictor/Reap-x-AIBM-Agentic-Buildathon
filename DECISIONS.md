@@ -40,3 +40,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791601617 | deadline decision/HACK-010-1791600708/1791601608 | REVERSIBLE_AND_LOG | Option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task; Why: Human explicitly authorized on this turn: apply correction during freeze, fetch and pull main, finish HACK010 only; no money, accounts, publishing or scope expansion.
 - 1791601876 | HACK-010 | Finish only010, no new claims; adapt payment UI only to real008 source after publication | Why: Human directly authorized freezefix and exclusive010.008 ownerfernando2 replaced tentativeplans withledgers; not invent data or criterioncompletion.
 - 1791602015 | HACK-012 | El humano cancelo el trabajo; liberar la tarea sin cancelar el backlog. | Why: Cancelacion explicita de Javier.
+- 1791602176 | HACK-018 | El humano cancelo todo el trabajo; liberar reserva sin cancelar el backlog. | Why: Cancelacion explicita de Javier.

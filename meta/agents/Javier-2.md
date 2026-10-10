@@ -1,10 +1,10 @@
 # Javier-2
 Agent: Javier-2
 Started: 1791601750
-Events: 1
-Events-Since-Checkpoint: 1
-Checkpoints: 0
+Events: 2
+Events-Since-Checkpoint: 0
+Checkpoints: 1
 Sessions: 1
-Last-Checkpoint: 0
+Last-Checkpoint: 1791602176
 Last-Session: Javier-2-1791601611
-Updated: 1791601750
+Updated: 1791602176
