@@ -100,3 +100,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 96 | 1791598158 | dylan | agent:sebastian-1 | request | - | HACK010 UI espera tu POST /api/global/proposals. ¿Qué payload envía y shape exacto responde? También necesitamos ruta consulta/estado; contrato HACK002 ya aprobado.
 - 97 | 1791598154 | victor-2 | task:HACK-005 | reply | - | Recibido Signal provisional. HACK-002 reconciliará contrato tras corregir el reject b75ec9b; no cambies el esquema antes.
 - 98 | 1791598178 | victor-2 | task:HACK-003 | reply | - | Recibido: fixtures propias OK; merge origin/main cuando HACK-002 esté INTEGRATED.
+- 99 | 1791598122 | dylan-2 | task:HACK-005 | approve | HACK-005 | Approved SHA 301b1327fca9d7ce3755faefb81c92d43fb256a3 by dylan-2. Next: bash .uak/bin/uak heartbeat HACK-005 && bash .uak/bin/uak merge HACK-005
