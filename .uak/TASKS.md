@@ -11,7 +11,7 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Depends on:** None
 - **Uses contract:** None
 - **Related:** None
-- **Paths:** pyproject.toml, uv.lock, package.json, package-lock.json, web/package.json, web/package-lock.json, app/main.py, app/config.py, app/__init__.py, app/routers/__init__.py, app/services/__init__.py, web/src/App.tsx, web/src/index.css, web/src/main.tsx, web/src/vite-env.d.ts, web/tsconfig.app.json, web/tsconfig.node.json, web/public/, web/.gitignore, web/eslint.config.js, app/tests/test_health.py, .python-version, .uak/bin/smoke-project, web/src/lib/api.ts, web/index.html, web/vite.config.ts, web/tsconfig.json, .env.example, .github/workflows/
+- **Paths:** pyproject.toml, uv.lock, package.json, package-lock.json, web/package.json, web/package-lock.json, app/main.py, app/config.py, app/__init__.py, app/routers/__init__.py, app/services/__init__.py, web/src/App.tsx, web/src/index.css, web/src/main.tsx, web/src/vite-env.d.ts, web/tsconfig.app.json, web/tsconfig.node.json, web/public/, web/.gitignore, web/eslint.config.js, app/tests/test_health.py, .python-version, .uak/bin/smoke-project, web/src/lib/api.ts, web/index.html, web/vite.config.ts, web/tsconfig.json, .env.example, .gitignore, .github/workflows/
 - **Freeze-Allowed:** no
 - **Acceptance:**
   - Sigue `.uak/stacks/fastapi-react/STACK.md`; `app/main.py` autodescubre routers y sirve `web/dist`
