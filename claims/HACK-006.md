@@ -9,8 +9,8 @@ Priority: P0
 Paths: app/services/global_agent.py, app/routers/global_agent.py, app/tests/test_global_agent.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_global_agent.py`
-Lease-Until: 1791600165
-Updated: 1791597465
+Lease-Until: 1791600600
+Updated: 1791597900
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
 Next: Coordinator confirms identity then contract/advisor plan review; implement three owned files only
 PR: -
