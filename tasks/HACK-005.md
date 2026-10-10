@@ -9,14 +9,14 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791613553
-Updated: 1791599153
+Lease-Until: 1791613601
+Updated: 1791599201
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
+Next: Human integration PR2 or kit-owner scope gate correction; await006 SHA for HACK010 real endpoint verification
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: SHA 01fd797; q uv run pytest -q app/tests/test_signals.py: 32 passed exit0; q bash .uak/bin/smoke: PRODUCT_PASS exit0; git diff --check pass. Signal canónico directo y regresión load_products.
-Events: 34
-Checkpoints: 8
+Events: 35
+Checkpoints: 9
 Sessions: 8
-Last-Checkpoint: 1791598949
+Last-Checkpoint: 1791599201
 Task-Tip: 01fd7971fcebd5c5c71694a669ada313ad9f4f3b

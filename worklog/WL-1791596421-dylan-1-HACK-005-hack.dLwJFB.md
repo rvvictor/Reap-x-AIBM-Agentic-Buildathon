@@ -1,12 +1,12 @@
 # worklog/WL-1791596421-dylan-1-HACK-005-hack.dLwJFB.md · HACK-005
 
 ## Live summary
-- Done: 01fd797 pushed; fetched and merged origin/main; direct app.schemas.Signal; canonical fixture categories; 32 tests and smoke PRODUCT_PASS; PR2 updated
-- Decision: Preserve extractor output policy and independent review of new SHA; previous merge human queue remains
-- Why: Shared HACK002 contract integrated; reviewer canonical-category mismatch fixed
-- Failing: Initial loader regression returned0; fixture IDs fixed. Prior lint TRY004/UP017 corrected. No unresolved product failures.
-- Commands: git fetch && git merge origin/main; q uv run pytest -q app/tests/test_signals.py; q bash .uak/bin/smoke; git diff --check; git push origin feat/hack-005
-- Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
+- Done: 01fd797 pushed and independently approved by victor-2 and dylan-2; 32 tests smoke green from latest diff; direct canonical Signal and inventory categories
+- Decision: Keep human merge queue for known scope gate; no repeated unchanged gate attempt. Continue dependency integration/review.
+- Why: Gate still uses original Task-Base on origin/main and includes inherited .env.example; HACK010 needs HACK006 and008 contracts
+- Failing: No product failure; merge scope gate unresolved. HACK010 real endpoint and payment contract unavailable.
+- Commands: uak next/inbox/status; git fetch; inspected origin/main scope gate; gh pr view4; requests to006/008
+- Next: Human integration PR2 or kit-owner scope gate correction; await006 SHA for HACK010 real endpoint verification
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -43,3 +43,4 @@
 - 1791599014 | REVIEW | dylan-2 | review; approve; SHA 01fd7971fcebd5c5c71694a669ada313ad9f4f3b; reviewer dylan-2
 - 1791599153 | REVIEW | dylan-1 | heartbeat; lease until 1791613553
 - 1791599163 | REVIEW | dylan-1 | merge rechazado; Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
+- 1791599201 | REVIEW | dylan-1 | checkpoint; next: Human integration PR2 or kit-owner scope gate correction; await006 SHA for HACK010 real endpoint verification

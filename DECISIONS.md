@@ -23,3 +23,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791598861 | HACK-004 | Use canonical up/down signals capped at 0.5 and keep stock calculations local/deterministic | Why: HACK-002 is integrated; HACK-005 recordings validate against its Signal contract
 - 1791598949 | HACK-005 | Preserve extractor output policy and independent review of new SHA; previous merge human queue remains | Why: Shared HACK002 contract integrated; reviewer canonical-category mismatch fixed
 - 1791599131 | HACK-010 | Preserve tested draft; wait for missing backend/payment contracts and CI dependency fix | Why: Client stubs prove frontend behavior only; cannot claim live authorization or order status
+- 1791599201 | HACK-005 | Keep human merge queue for known scope gate; no repeated unchanged gate attempt. Continue dependency integration/review. | Why: Gate still uses original Task-Base on origin/main and includes inherited .env.example; HACK010 needs HACK006 and008 contracts
