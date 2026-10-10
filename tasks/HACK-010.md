@@ -9,13 +9,13 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791603211
-Updated: 1791600511
+Lease-Until: 1791604576
+Updated: 1791601876
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Apply option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task
+Next: Fetch published008SHA; adapt global/payments.tsx toactualmodels; real integratedauthorizationorderbrowser; independent design/security/review; publish finalSHA and integrate010 only.
 PR: -
 Evidence: -
-Events: 13
-Checkpoints: 4
+Events: 14
+Checkpoints: 5
 Sessions: 3
-Last-Checkpoint: 1791600511
+Last-Checkpoint: 1791601876
