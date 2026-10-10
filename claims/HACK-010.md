@@ -12,6 +12,6 @@ Verify: `npm --prefix web run build`
 Lease-Until: 1791601422
 Updated: 1791598722
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Confirm final HACK006 contract+SHA; integration check exact request; HACK008 real approval/order wiring; ready PR only after criteria
+Next: Apply option: Compact desktop typography with explicit line-height and spacing in owned feature CSS
 PR: -
 Evidence: -
