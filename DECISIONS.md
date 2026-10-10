@@ -18,3 +18,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791598368 | HACK-005 | Preserve human merge queue; do not bypass automatic scope gate | Why: Gate includes HACK001 upstream files from original Task-Base; current-main diff has only five allowed signals paths
 - 1791598547 | HACK-006 | Canonical contracts; MXN landed baselines; known-unit equivalence; business-level exclusion; caller quotes demo-only | Why: Apply advisor invariants; draft allocations cannot authorize checkout
 - 1791598498 | HACK-003 | sandbox sigue bloqueado sin REAP_API_KEY; el criterio queda cubierto con el 401 grabado | Why: no hay clave en .env
+- 1791598722 | HACK-010 | Draft pending actual backend integration and real payment contract | Why: HACK006 not published; HACK008 AVAILABLE; request/response conflicting messages127/129 need final SHA
