@@ -1,0 +1,20 @@
+{
+  "blocked": true,
+  "demo_data": false,
+  "recorded_at": "2026-10-10T01:57:57Z",
+  "reap_version": "2025-02-14",
+  "request": {
+    "method": "POST",
+    "path": "/agentic/products/search",
+    "query": "coffee",
+    "note": "Authorization bearer was empty. No API key in .env."
+  },
+  "status": 401,
+  "body": {
+    "error": {
+      "code": "INVALID_AUTH_HEADER",
+      "message": "Invalid Authorization header format",
+      "detail": null
+    }
+  }
+}
