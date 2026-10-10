@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/routers/payments.py, app/services/payments.py, web/src/features/checkout/, app/tests/test_payments.py
 Depends: HACK-003
 Verify: `uv run pytest -q app/tests/test_payments.py`
-Lease-Until: 1791603395
-Updated: 1791600695
+Lease-Until: 1791603446
+Updated: 1791600746
 Task-Base: a145e3350569b597e7615215ba1b1ad89a3b87df
 Next: Implementar el reparto interno y llamar al cliente de HACK-003
 PR: -
 Evidence: -
-Events: 3
+Events: 4
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
