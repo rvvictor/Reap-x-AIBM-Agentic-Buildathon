@@ -15,7 +15,7 @@ Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
 Next: Implementar demanda = EWMA × temporada × evento + colchón
 PR: -
 Evidence: -
-Events: 1
+Events: 2
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
