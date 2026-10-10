@@ -12,6 +12,6 @@ Verify: `uv run pytest -q app/tests/test_signals.py`
 Lease-Until: 1791613553
 Updated: 1791599153
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Independent reviewer reviews 01fd797; human merge queue retained for previously recorded scope-gate issue
+Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -

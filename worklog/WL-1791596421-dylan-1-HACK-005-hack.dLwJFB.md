@@ -6,7 +6,7 @@
 - Why: Shared HACK002 contract integrated; reviewer canonical-category mismatch fixed
 - Failing: Initial loader regression returned0; fixture IDs fixed. Prior lint TRY004/UP017 corrected. No unresolved product failures.
 - Commands: git fetch && git merge origin/main; q uv run pytest -q app/tests/test_signals.py; q bash .uak/bin/smoke; git diff --check; git push origin feat/hack-005
-- Next: Independent reviewer reviews 01fd797; human merge queue retained for previously recorded scope-gate issue
+- Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -42,3 +42,4 @@
 - 1791599003 | REVIEW | victor-2 | review; approve; SHA 01fd7971fcebd5c5c71694a669ada313ad9f4f3b; reviewer victor-2
 - 1791599014 | REVIEW | dylan-2 | review; approve; SHA 01fd7971fcebd5c5c71694a669ada313ad9f4f3b; reviewer dylan-2
 - 1791599153 | REVIEW | dylan-1 | heartbeat; lease until 1791613553
+- 1791599163 | REVIEW | dylan-1 | merge rechazado; Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
