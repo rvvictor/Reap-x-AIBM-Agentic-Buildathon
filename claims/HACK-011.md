@@ -1,6 +1,6 @@
 # HACK-011
 ID: HACK-011
-State: CLAIMED
+State: REVIEW
 Owner: victor-2
 Branch: feat/hack-011
 Worktree: /Users/victor/Documents/Proyectos/Reap-x-AIBM-Agentic-Buildathon-wt/hack-011
@@ -9,9 +9,9 @@ Priority: P0
 Paths: README.md, docs/DEMO.md, e2e/
 Depends: HACK-001
 Verify: `bash .uak/bin/smoke`
-Lease-Until: 1791611053
-Updated: 1791608353
+Lease-Until: 1791623373
+Updated: 1791608973
 Task-Base: f08a4333938939e1a3da9ff8182839bf983da719
-Next: Traer main, probar flujo completo, e2e/ y capturas
-PR: -
+Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/15; run .uak/bin/smoke
+PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/15
 Evidence: -
