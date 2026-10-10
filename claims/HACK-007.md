@@ -9,8 +9,8 @@ Priority: P1
 Paths: app/mcp/, app/tests/test_mcp.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_mcp.py`
-Lease-Until: 1791608274
-Updated: 1791605574
+Lease-Until: 1791608751
+Updated: 1791606051
 Task-Base: 4e2627ccf77c552ec5638beb65e3cc81a4effba5
 Next: Apply option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval
 PR: -
