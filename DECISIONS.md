@@ -13,3 +13,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791597794 | HACK-003 | sin clave no hay checkout COMPLETED; DEMO_MODE lee las respuestas grabadas | Why: no hay .env ni REAP_API_KEY
 - 1791597927 | HACK-006 | Resume HACK-006 here; preserve HACK-004 uncommitted forecast files | Why: Human requested recovery after terminal crash; duplicate sebastian-2 identity must be separated before concurrent execution
 - 1791598033 | HACK-005 | Known rejection resolved; require approval on new SHA before merge | Why: Previous approval did not cover null/scalar output defect
+- 1791598095 | HACK-010 | Demo-only draft until backend contracts available | Why: HACK006 request/response and HACK008 authorization/order status pending; no invented live statuses

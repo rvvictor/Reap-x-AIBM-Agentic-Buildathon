@@ -1,7 +1,7 @@
 # STATE
 
 Phase: execution
-Updated: 1791598091
+Updated: 1791598095
 AVAILABLE: HACK-007 HACK-008 HACK-011 HACK-012 HACK-013 HACK-014 HACK-015 HACK-016 HACK-017 HACK-018 HACK-019 
 CLAIMED: HACK-003 HACK-004 HACK-006 HACK-009 HACK-010 
 BLOCKED: -
@@ -16,15 +16,15 @@ HACK-004 | CLAIMED | sebastian-2 | until 1791599978
 HACK-005 | REVIEW | dylan-1 | until 1791612516
 HACK-006 | CLAIMED | sebastian-1 | until 1791600748
 HACK-009 | CLAIMED | victor-1 | until 1791600135
-HACK-010 | CLAIMED | dylan-2 | until 1791600468
+HACK-010 | CLAIMED | dylan-2 | until 1791600795
 
 Blockers: BLOCKED tasks; use status --task ID --summary.
 Current decisions (last 5):
-- 1791597724 | HACK-005 | Use exact local adapter until HACK-002 lands in main; retain source-bound checks and evidence-derived demo provenance | Why: Published HACK-002 contract i
 - 1791597748 | HACK-005 | Keep HACK-005 in REVIEW pending independent review | Why: Verification green and branch pushed; independent reviewer must approve before integration
 - 1791597794 | HACK-003 | sin clave no hay checkout COMPLETED; DEMO_MODE lee las respuestas grabadas | Why: no hay .env ni REAP_API_KEY
 - 1791597927 | HACK-006 | Resume HACK-006 here; preserve HACK-004 uncommitted forecast files | Why: Human requested recovery after terminal crash; duplicate sebastian-2 identity mu
 - 1791598033 | HACK-005 | Known rejection resolved; require approval on new SHA before merge | Why: Previous approval did not cover null/scalar output defect
+- 1791598095 | HACK-010 | Demo-only draft until backend contracts available | Why: HACK006 request/response and HACK008 authorization/order status pending; no invented live statuse
 
 Global next step: available P0; else review PRs, tests, demo, rehearsal.
 Why: bounded snapshot to resume without rereading history.
