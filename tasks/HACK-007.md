@@ -15,7 +15,7 @@ Task-Base: 4e2627ccf77c552ec5638beb65e3cc81a4effba5
 Next: Esqueleto del servidor MCP con las 3 herramientas
 PR: -
 Evidence: -
-Events: 1
+Events: 2
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0

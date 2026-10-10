@@ -10,3 +10,4 @@
 
 ## History
 - 1791601004 | CLAIMED | sebastian-1 | claim; next: Esqueleto del servidor MCP con las 3 herramientas
+- 1791601616 | CLAIMED | sebastian-1 | pending decision HACK-007-1791601616; option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval; Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested
