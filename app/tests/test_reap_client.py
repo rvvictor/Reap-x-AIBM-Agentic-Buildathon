@@ -4,7 +4,12 @@ from pathlib import Path
 import httpx
 import pytest
 
-from app.integrations.reap.client import DOCUMENTED_REAP_VERSION, FIXTURE_DIR, ReapClient, ReapConfigError
+from app.integrations.reap.client import (
+    DOCUMENTED_REAP_VERSION,
+    FIXTURE_DIR,
+    ReapClient,
+    ReapConfigError,
+)
 
 LIVE = {"DEMO_MODE": "false", "REAP_API_KEY": "test-key-not-a-secret", "REAP_VERSION": ""}
 
