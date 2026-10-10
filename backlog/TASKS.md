@@ -49,7 +49,7 @@ Append-only; added to .uak/TASKS.md from main. Why: adding tasks never waits for
 - **Uses contract:** HACK-002
 - **Related:** HACK-006, HACK-008
 - **Paths:** app/services/policy.py, app/routers/policy.py, app/tests/test_policy.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Reglas verificables: tope de presupuesto, sustituciones permitidas, cantidad máxima y detención si el precio cambia fuera de lo autorizado
   - Cada decisión del agente queda en una bitácora con motivo, hora y quién autorizó
