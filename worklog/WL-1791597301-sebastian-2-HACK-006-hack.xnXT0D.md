@@ -16,3 +16,4 @@
 - 1791597996 | AVAILABLE | sebastian-2 | release; claim released by sebastian-2; reason: -; summary kept
 - 1791598048 | CLAIMED | sebastian-1 | claim; next: Leer contrato HACK-002 publicado; consultar advisor; implementar agente global y probar Verify más smoke
 - 1791598547 | CLAIMED | sebastian-1 | checkpoint; next: Advisor done review then fresh main merge scope verification commit push small PR
+- 1791598270 | CLAIMED | sebastian-1 | heartbeat; lease until 1791600970
