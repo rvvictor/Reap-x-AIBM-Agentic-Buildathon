@@ -9,14 +9,14 @@ Priority: P0
 Paths: app/schemas/, app/fixtures/businesses/, web/DESIGN.md, app/tests/test_schemas.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_schemas.py`
-Lease-Until: 1791611969
-Updated: 1791597569
+Lease-Until: 1791612392
+Updated: 1791597992
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/3; run .uak/bin/smoke
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/3
-Evidence: pytest test_schemas OK (4 tests); smoke PRODUCT_PASS; sha b75ec9b
-Events: 4
+Evidence: fix reject: demo_data en SalesRecord y sales.json; pytest 4 OK; smoke PRODUCT_PASS; sha ebe8d21
+Events: 5
 Checkpoints: 0
 Sessions: 3
 Last-Checkpoint: 0
-Task-Tip: b75ec9b1be081bef6bfb77c322b42730221aa131
+Task-Tip: ebe8d215fdd59cb9e3fb63fa57b2bb0a0812a58f

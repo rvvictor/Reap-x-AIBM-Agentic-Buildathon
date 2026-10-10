@@ -9,8 +9,8 @@ Priority: P0
 Paths: app/schemas/, app/fixtures/businesses/, web/DESIGN.md, app/tests/test_schemas.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_schemas.py`
-Lease-Until: 1791611969
-Updated: 1791597569
+Lease-Until: 1791612392
+Updated: 1791597992
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/3; run .uak/bin/smoke
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/3
