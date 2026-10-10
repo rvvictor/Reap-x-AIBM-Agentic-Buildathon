@@ -1,16 +1,16 @@
 # STATE
 
 Phase: feature freeze; authorized fixes, rehearsal and submission only
-Updated: 1791611522
+Updated: 1791611621
 AVAILABLE: HACK-017 HACK-012 
-CLAIMED: HACK-014 HACK-016 HACK-019 
+CLAIMED: HACK-016 HACK-019 
 BLOCKED: -
-REVIEW: HACK-015 
+REVIEW: HACK-014 HACK-015 
 INTEGRATED: (13; last 12) ... HACK-002 HACK-003 HACK-004 HACK-005 HACK-006 HACK-007 HACK-008 HACK-009 HACK-010 HACK-011 HACK-013 HACK-018 
 CANCELLED: -
 
 Claims (first 24; status --task ID shows detail):
-HACK-014 | CLAIMED | Javier-2 | until 1791613214
+HACK-014 | REVIEW | Javier-2 | until 1791626021
 HACK-015 | REVIEW | fernando-1 | until 1791625915
 HACK-016 | CLAIMED | fernando-2 | until 1791614179
 HACK-019 | CLAIMED | Javier-1 | until 1791613912
