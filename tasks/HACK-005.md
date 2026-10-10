@@ -15,7 +15,7 @@ Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
 Next: Definir el prompt y el validador de esquema Signal
 PR: -
 Evidence: -
-Events: 2
+Events: 3
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
