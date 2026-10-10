@@ -130,7 +130,7 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Uses contract:** HACK-002
 - **Related:** HACK-004, HACK-006
 - **Paths:** app/mcp/, app/tests/test_mcp.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Herramientas `publicar_faltas`, `consultar_ofertas`, `proponer_compra` expuestas por MCP
   - El agente local publica una falta y el global la recibe en una prueba
@@ -149,7 +149,7 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Uses contract:** HACK-002, HACK-006
 - **Related:** None
 - **Paths:** app/routers/payments.py, app/services/payments.py, web/src/features/checkout/, app/tests/test_payments.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Enrollment EXTERNAL con returnUrl HTTPS y confirmación `ACTIVE` antes de cobrar
   - Cada negocio autoriza su parte con tope de presupuesto; sin autorización no hay checkout
@@ -187,7 +187,7 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Uses contract:** HACK-002, HACK-006, HACK-008
 - **Related:** None
 - **Paths:** web/src/features/global/
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Muestra comparación de proveedores por categoría, costo total entregado y ahorro por negocio
   - Botón de autorización por negocio y estado real de cada pedido

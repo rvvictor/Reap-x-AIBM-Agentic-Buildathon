@@ -7,10 +7,10 @@
 |---|---|
 | Event / challenge | Reap x AI Builders Mexico Agentic Buildathon · https://aibuilders.mx/reap |
 | Start | 2026-10-09 17:00 America/Mexico_City |
-| Official deadline | 2026-10-09 21:00 America/Mexico_City · platforms: Gavel form https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop |
-| Freeze | 20:30 (deadline − 30 min; compressed, the 4 h event makes the standard −6 h fall before the start) → `Freeze-Epoch` |
-| Clean rehearsal / plan B | 20:00 (deadline − 1 h) |
-| Internal submission | 20:40 (deadline − 20 min) |
+| Official deadline | 2026-10-09 23:59 America/Mexico_City · platforms: Gavel form https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop |
+| Freeze | 23:29 (deadline − 30 min; compressed, the 4 h event makes the standard −6 h fall before the start) → `Freeze-Epoch` |
+| Clean rehearsal / plan B | 22:59 (deadline − 1 h) |
+| Internal submission | 23:39 (deadline − 20 min) |
 | Humans | Fernando Vargas: team captain, receives the Reap API key via Telegram; Victor Ruiz; Sebastian Jara; Javier Reyna; Dylan Martinez · submission owner: Fernando Vargas |
 | Agents | TBD per human (max 2) |
 | Machines | laptops · ports already taken: none known |
@@ -49,7 +49,7 @@ Autonomy: yes
 Auto-Merge: yes
 Review-Mode: claims
 Plan-Channel: claims
-Freeze-Epoch: 1791599456
+Freeze-Epoch: 1791610140
 Lease-Seconds: 2700
 Review-Lease-Seconds: 14400
 Events-Per-Session: 100
