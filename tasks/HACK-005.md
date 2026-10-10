@@ -12,10 +12,10 @@ Verify: `uv run pytest -q app/tests/test_signals.py`
 Lease-Until: 1791599649
 Updated: 1791596949
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: After local Claude login, read PR2; wait for HACK-001 integration, change base to main, reconcile HACK-002 Signal contract and run uak-ship
+Next: Apply option: Validate a provisional Signal adapter following IDEA.md until HACK-002 publishes the canonical schema; no edits to shared schema files
 PR: -
 Evidence: -
-Events: 6
+Events: 7
 Checkpoints: 2
 Sessions: 1
 Last-Checkpoint: 1791596949
