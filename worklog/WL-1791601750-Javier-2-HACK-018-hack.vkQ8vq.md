@@ -12,3 +12,4 @@
 - 1791601750 | CLAIMED | Javier-2 | claim; next: Preparar
 - 1791602176 | CLAIMED | Javier-2 | checkpoint; next: Revisar cambios existentes y completar docs/PITCH.md y docs/VIDEO.md desde IDEA; Verify antes de PR.
 - 1791602245 | AVAILABLE | Javier-2 | release; claim released by Javier-2; reason: -; summary kept
+- 1791609684 | CLAIMED | sebastian-1 | claim; next: Revisar cambios existentes y completar docs/PITCH.md y docs/VIDEO.md desde IDEA; Verify antes de PR.
