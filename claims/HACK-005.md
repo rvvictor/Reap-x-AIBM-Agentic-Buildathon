@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791613605
-Updated: 1791599205
+Lease-Until: 1791613613
+Updated: 1791599213
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Human integration PR2 or kit-owner scope gate correction; await006 SHA for HACK010 real endpoint verification
+Next: Human/owner resolve inherited Task-Base scope; merge PR2 approved01fd797 without widening signal edits
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/2
 Evidence: -
