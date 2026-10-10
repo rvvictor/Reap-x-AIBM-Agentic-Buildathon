@@ -15,3 +15,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791598033 | HACK-005 | Known rejection resolved; require approval on new SHA before merge | Why: Previous approval did not cover null/scalar output defect
 - 1791598095 | HACK-010 | Demo-only draft until backend contracts available | Why: HACK006 request/response and HACK008 authorization/order status pending; no invented live statuses
 - 1791598249 | deadline decision/HACK-004-1791597330/1791598230 | REVERSIBLE_AND_LOG | Option: Stack local HACK-001 para pruebas; adapter provisional IDEA.md sin tocar schemas ni fixtures ajenos; Why: Esqueleto en REVIEW y contrato HACK-002 pendiente; permite verificar motor independiente; no money, accounts, publishing or scope expansion.
+- 1791598368 | HACK-005 | Preserve human merge queue; do not bypass automatic scope gate | Why: Gate includes HACK001 upstream files from original Task-Base; current-main diff has only five allowed signals paths
