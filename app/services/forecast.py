@@ -33,7 +33,8 @@ class ProductInput(InputModel):
         if self.unit_price_cents is not None:
             return self.unit_price_cents
         if self.unit_cost is not None and self.unit_cost > 0:
-            return round(self.unit_cost * 100)
+            cents = round(self.unit_cost * 100)
+            return cents if cents > 0 else None
         return None
 
     @model_validator(mode="after")
@@ -64,7 +65,7 @@ class SignalInput(InputModel):
 
     @model_validator(mode="after")
     def valid_window(self):
-        if self.valid_from >= self.valid_to:
+        if self.valid_from > self.valid_to:
             raise ValueError("signal validity window is reversed")
         return self
 

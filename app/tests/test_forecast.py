@@ -5,6 +5,8 @@ from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
 from app.main import app
+from app.schemas import Product, SalesRecord, Signal
+from app.schemas.loader import load_products, load_sales
 from app.services.forecast import ForecastInput, forecast
 
 
@@ -94,13 +96,14 @@ def test_shared_budget_minimums_and_permutation(recorded_input):
 
 
 @pytest.mark.parametrize("mutate", [
-    lambda d: d["products"][0].update(min=21),
+    lambda d: d["products"][0].update(min_stock=21),
     lambda d: d["products"][0].update(capacity=1),
     lambda d: d["products"].append(deepcopy(d["products"][0])),
     lambda d: d["sales"][0].update(qty=float("nan")),
     lambda d: d["sales"][0].update(qty=-1),
     lambda d: d["sales"][0].update(sku_id="unknown"),
     lambda d: (d["products"][0].pop("unit_cost"), d.update(budget_cap_cents=100)),
+    lambda d: (d["products"][0].update(unit_cost=0.001), d.update(budget_cap_cents=100)),
     lambda d: d.update(signals=[signal(magnitude=0.6)]),
 ])
 def test_reject_invalid_inputs(recorded_input, mutate):
@@ -119,3 +122,55 @@ def test_endpoint(recorded_input):
     recorded_input.update(budget_cap_cents=0)
     recorded_input["products"][0].update(current_stock=0, unit_price_cents=100)
     assert client.post("/api/businesses/cafe-1/forecast", json=recorded_input).status_code == 422
+
+
+def test_endpoint_accepts_published_business_fixtures_and_recorded_signal():
+    client = TestClient(app)
+    product = load_products(business_id="cafe-aurora")[0]
+    sales = [row.model_dump(mode="json") for row in load_sales(business_id="cafe-aurora")
+             if row.sku_id == product.id]
+    payload = {"as_of": "2026-10-09", "products": [product.model_dump(mode="json")], "sales": sales}
+
+    baseline = client.post("/api/businesses/cafe-aurora/forecast", json=payload)
+    with_signal = {**payload, "signals": [signal(categories=[product.category])]}
+    response = client.post("/api/businesses/cafe-aurora/forecast", json=with_signal)
+
+    assert baseline.status_code == response.status_code == 200
+    assert len(sales) == 90
+    assert response.json()["forecasts"][0]["target"] > baseline.json()["forecasts"][0]["target"]
+    assert response.json()["demo_data"] is True
+
+
+def test_endpoint_accepts_hack005_recording_and_hack002_schema_models():
+    product = Product.model_validate({
+        "id": "cafe-fixture:coffee", "business_id": "cafe-fixture", "name": "Coffee",
+        "category": "coffee", "unit": "bag", "base_stock": 10, "min_stock": 2,
+        "max_stock": 20, "current_stock": 3, "unit_cost": 4.25,
+        "updated_at": "2026-10-09T12:00:00", "demo_data": True,
+    })
+    sales = [SalesRecord.model_validate({"sku_id": product.id, "date": "2026-10-09",
+                                         "qty": 10, "demo_data": True})]
+    recorded = [
+        Signal.model_validate({"id": "demo-cold-coffee", "kind": "weather",
+                               "description": "El frío eleva la demanda de bebidas calientes.",
+                               "categories": ["coffee", "filters"], "direction": "up",
+                               "magnitude": 0.25, "source": "demo:clima-frio",
+                               "valid_from": "2026-10-09", "valid_to": "2026-10-16",
+                               "demo_data": True}),
+        Signal.model_validate({"id": "demo-event-cups", "kind": "event",
+                               "description": "El evento local aumenta la demanda de café y vasos.",
+                               "categories": ["coffee", "cups"], "direction": "up",
+                               "magnitude": 0.15, "source": "demo:evento-cafeterias",
+                               "valid_from": "2026-10-09", "valid_to": "2026-10-12",
+                               "demo_data": True}),
+    ]
+    request = {"as_of": "2026-10-09", "products": [product.model_dump(mode="json")],
+               "sales": [sale.model_dump(mode="json") for sale in sales],
+               "signals": [item.model_dump(mode="json") for item in recorded]}
+
+    response = TestClient(app).post("/api/businesses/cafe-fixture/forecast", json=request)
+
+    assert response.status_code == 200
+    result = response.json()
+    assert result["forecasts"][0]["target"] > product.base_stock
+    assert result["demo_data"] is True
