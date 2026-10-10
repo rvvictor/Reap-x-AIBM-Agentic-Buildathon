@@ -2,12 +2,13 @@
 
 ## Live summary
 - Done: Claim created; implementation pending
-- Decision: Own branch and worktree
-- Why: Parallel work without touching the main checkout
+- Decision: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval
+- Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested
 - Failing: No validation run yet
 - Commands: `uv run pytest -q app/tests/test_mcp.py`
-- Next: Esqueleto del servidor MCP con las 3 herramientas
+- Next: Apply option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval
 
 ## History
 - 1791601004 | CLAIMED | sebastian-1 | claim; next: Esqueleto del servidor MCP con las 3 herramientas
 - 1791601616 | CLAIMED | sebastian-1 | pending decision HACK-007-1791601616; option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval; Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested
+- 1791602542 | CLAIMED | scheduler | deadline decision HACK-007-1791601616; option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval; Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested

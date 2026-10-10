@@ -12,10 +12,10 @@ Verify: `uv run pytest -q app/tests/test_mcp.py`
 Lease-Until: 1791603704
 Updated: 1791601004
 Task-Base: 4e2627ccf77c552ec5638beb65e3cc81a4effba5
-Next: Esqueleto del servidor MCP con las 3 herramientas
+Next: Apply option: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval
 PR: -
 Evidence: -
-Events: 2
+Events: 3
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
