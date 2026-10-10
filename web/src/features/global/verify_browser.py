@@ -26,7 +26,7 @@ with sync_playwright() as p:
         )
 
     page.route("**/api/global/proposals", proposals_route)
-    page.goto(f"http://127.0.0.1:{port}", wait_until="networkidle")
+    page.goto(f"http://127.0.0.1:{port}/#global", wait_until="networkidle")
     expect(
         page.get_by_role("heading", name="Juntos, el café cuesta menos.")
     ).to_be_visible()

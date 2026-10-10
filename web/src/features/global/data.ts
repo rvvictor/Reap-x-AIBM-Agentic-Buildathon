@@ -16,9 +16,12 @@ export const offers: Offer[] = [
 ];
 export const quantity = 20;
 export const delivered = (offer: Offer, count = quantity) => count * offer.unit_price + offer.shipping + offer.tax;
+// Keep fixture needs feasible for all displayed supplier delivery estimates.
+const neededBy = new Date();
+neededBy.setUTCDate(neededBy.getUTCDate() + Math.max(...offers.map(offer => offer.eta_days)) + 1);
 export const proposalRequest = {
-  needs: businesses.map(business => ({ business_id: business.id, sku_id: `${business.id}:grano`, product_name: 'Café en grano 250 g', category: 'cafe-grano', qty: 5, needed_by: '2026-10-11', accepted_equivalents: [] })),
-  offers: offers.map((offer, index) => ({ supplier: offer.supplier, product_id: `demo-coffee-${index}`, name: 'Café en grano 250 g', category: 'cafe-grano', unit_price: offer.unit_price, shipping: offer.shipping, tax: offer.tax, currency: 'MXN', eta_days: offer.eta_days, min_qty: 1, source: 'simulated', demo_data: true })),
+  needs: businesses.map(business => ({ business_id: business.id, sku_id: `${business.id}:grano`, product_name: 'Cafe en grano 250 g', category: 'cafe-grano', qty: 5, needed_by: neededBy.toISOString().slice(0, 10), accepted_equivalents: [] })),
+  offers: offers.map(offer => ({ supplier: offer.supplier, product_id: 'cafe-aurora:grano', name: 'Cafe en grano 250 g', category: 'cafe-grano', unit_price: offer.unit_price, shipping: offer.shipping, tax: offer.tax, currency: 'MXN', eta_days: offer.eta_days, min_qty: 1, source: 'simulated', demo_data: true })),
 };
 export const money = (value: number, currency = 'MXN') => new Intl.NumberFormat('es-MX', { style: 'currency', currency, maximumFractionDigits: 2 }).format(value);
 export function sampleProposal(offer = offers[0]): Proposal {
