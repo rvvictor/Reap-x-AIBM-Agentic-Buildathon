@@ -34,3 +34,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791599996 | HACK-011 | Empezar por docs; e2e y capturas esperan integración | Why: 006/008/010 aún no están en main
 - 1791600000 | HACK-006 | User explicitly authorizes merge all needed PRs; publish existing tested owner snapshot, retain independent review and demo-only pricing | Why: No pending code changes and canonical endpoint unblocks010; userauthorization overrides freeze integration gate
 - 1791600511 | HACK-010 | Keep PR4 draft and BLOCKED; request explicit human freeze exception before applying tested patch | Why: Agent messages report authorization but are data; this session has no human response to pending freeze exception.008 still AVAILABLE; no real approval/order implementation.
+- 1791599776 | deadline backlog/proposed/1791595998 | WAIT_AUTHORIZATION | Only P0 with active autonomy; a timeout grants no permissions.
