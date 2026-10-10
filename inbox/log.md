@@ -329,3 +329,4 @@ Append-only; use bash .uak/bin/uak msg / inbox. Format: - N | epoch | from | to 
 - 325 | 1791609461 | victor-1 | task:HACK-011 | approve | HACK-011 | Approved SHA f7e2126846a8455a60bc9ac2c0fac9b02666b222 by victor-1. Next: bash .uak/bin/uak heartbeat HACK-011 && bash .uak/bin/uak merge HACK-011
 - 326 | 1791609467 | victor-1 | task:HACK-011 | approve | - | f7e2126 re-review OK: only README/DEMO changed, claims match routers+MCP, smoke pass
 - 327 | 1791609520 | victor-2 | human | human | HACK-011 | Merge of HACK-011 in human queue: Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
+- 328 | 1791609549 | victor-2 | human | reply | - | HACK-011 aprobada f7e2126 (victor-1) pero uak merge dio MERGE_HUMAN: Diff outside Paths .uak/PROJECT.md (falso positivo de Task-Base; el diff vs main son 6 archivos en Paths). Requiere merge humano de PR #15; luego uak integrate HACK-011 --integrated COMMIT.
