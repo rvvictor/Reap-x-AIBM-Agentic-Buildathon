@@ -1,15 +1,15 @@
-# IDEA · TBD (nombre por definir)
+# IDEA · Bodega
 
 > Challenge: Reap x AIBM Agentic Buildathon · Event: Reap x AI Builders Mexico, 2026-10-09 17:00-21:00 CDMX. Tags: **[Decided]** · **[Recommended]** · **[To validate]**.
 > Every pitch number comes from §10 with a source. §4 → vertical tasks · §6 → contract · §7 → spikes · §8 → acceptance.
 > Idea completa y generalizada: `docs/IDEA-GENERAL.md`.
 
 ## 0. Name and brand (fixed at T0)
-- Name: **TBD** · repo/domain: Reap-x-AIBM-Agentic-Buildathon · tagline: TBD (8 palabras o menos).
+- Name: **Bodega** · repo/domain: Reap-x-AIBM-Agentic-Buildathon · tagline: TBD (8 palabras o menos).
 - Renaming after T−50% needs a human `uak decision`. El nombre debe fijarse antes de `/uak-design-lock`.
 
 ## 1. One line
-For **dueños de negocios pequeños sin contrato con distribuidores**, who **fijan un stock estático y pierden ventas o inmovilizan capital**, **<producto>** lets them **tener un stock objetivo dinámico por producto y comprar en grupo más barato** , unlike **reponer a ojo y pedir cada quien por su cuenta**. [Decided]
+For **dueños de negocios pequeños sin contrato con distribuidores**, who **fijan un stock estático y pierden ventas o inmovilizan capital**, **Bodega** lets them **tener un stock objetivo dinámico por producto y comprar en grupo más barato** , unlike **reponer a ojo y pedir cada quien por su cuenta**. [Decided]
 Edge over other teams: la mayoría hará chatbots de compra o agentes de pedido; nosotros ponemos la **predicción de stock por producto** como núcleo y un agente global que agrupa y compara proveedores. [To validate]
 
 ## 2. Users

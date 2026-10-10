@@ -1,4 +1,4 @@
-# PROJECT · Reap x AIBM Agentic Buildathon (sprint mode)
+# PROJECT · Bodega · Reap x AIBM Agentic Buildathon (sprint mode)
 
 > Filled in by `/uak-setup`. uak reads the flat fields of the last block from the remote `main`.
 
@@ -15,7 +15,7 @@
 | Agents | TBD per human (max 2) |
 | Machines | laptops · ports already taken: none known |
 | Team | Axolutions · contact vargas.fer2442@gmail.com |
-| Product name | TBD (idea still under discussion) |
+| Product name | Bodega |
 
 ## Official rubric (weights sum to 100)
 Judging criteria and weights are NOT published (unverified). Proxy rows come from the track text and the 9-item checklist on the event page.
@@ -44,7 +44,7 @@ A human sets `yes`. A missing field means `no`.
 ```text
 Mode: sprint
 Backlog-Proposed-Epoch: 1791595398
-Backlog-Approved: no
+Backlog-Approved: yes
 Autonomy: yes
 Auto-Merge: yes
 Review-Mode: claims

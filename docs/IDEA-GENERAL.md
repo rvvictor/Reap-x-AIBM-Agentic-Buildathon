@@ -1,6 +1,6 @@
 # Idea general · Red de agentes de abasto con predicción de stock
 
-> Nombre del producto: **por definir**. Estado: idea definida por el equipo Axolutions durante el Reap x AIBM Agentic Buildathon (2026-10-09).
+> Nombre del producto: **Bodega**. Estado: idea definida por el equipo Axolutions durante el Reap x AIBM Agentic Buildathon (2026-10-09).
 > Origen: conversación con Codex (`ideaprimaria`) + decisiones del equipo. Las cifras de ahorro son hipótesis hasta validarse (ver §9).
 
 ## 1. Resumen en una frase
