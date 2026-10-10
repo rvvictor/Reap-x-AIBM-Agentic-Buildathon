@@ -71,7 +71,7 @@ def main() -> None:
                 season = 1 + (ramp - 1) * (d / (DAYS - 1))
                 weekend = 1.25 if day.weekday() >= 5 else 1.0
                 qty = max(0, round(mean * scale * season * weekend * rng.uniform(0.7, 1.3)))
-                sales.append({"sku_id": sku, "date": day.isoformat(), "qty": qty})
+                sales.append({"sku_id": sku, "date": day.isoformat(), "qty": qty, "demo_data": True})
     for fname, rows in (("businesses", businesses), ("products", products), ("sales", sales)):
         (OUT / f"{fname}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=None), encoding="utf-8")
     print(f"businesses={len(businesses)} products={len(products)} sales={len(sales)}")

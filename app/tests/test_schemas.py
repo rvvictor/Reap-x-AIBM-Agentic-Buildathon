@@ -25,6 +25,7 @@ def test_sales_history_90_days_per_sku_and_cold_season_ramp() -> None:
     sales = load_sales()
     skus = {p.id for p in load_products()}
     assert len(sales) == len(skus) * 90
+    assert all(s.demo_data for s in sales)
     chai = sorted((s for s in sales if s.sku_id == "cafe-aurora:chai"), key=lambda s: s.date)
     first, last = sum(s.qty for s in chai[:30]), sum(s.qty for s in chai[-30:])
     assert last > first

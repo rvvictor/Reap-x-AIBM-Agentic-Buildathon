@@ -42,6 +42,7 @@ class SalesRecord(BaseModel):
     sku_id: str
     date: date
     qty: int = Field(ge=0)
+    demo_data: bool = True
 
 
 class Signal(BaseModel):
