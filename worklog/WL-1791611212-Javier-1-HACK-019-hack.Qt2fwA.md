@@ -11,3 +11,4 @@
 ## History
 - 1791611212 | CLAIMED | Javier-1 | claim; next: Pruebas E2E reales del flujo DEMO_MODE con capturas escritorio y movil; coordinar turno exclusivo de verificacion
 - 1791611824 | CLAIMED | Javier-1 | heartbeat; lease until 1791614524
+- 1791612926 | CLAIMED | Javier-1 | heartbeat; lease until 1791615626

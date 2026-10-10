@@ -9,13 +9,13 @@ Priority: P1
 Paths: tests/e2e/
 Depends: HACK-001
 Verify: `uv run pytest -q tests/e2e`
-Lease-Until: 1791614524
-Updated: 1791611824
+Lease-Until: 1791615626
+Updated: 1791612926
 Task-Base: 6dfc3ae4ea63d61e6ab826f8ac46e05c4eea89c7
 Next: Pruebas E2E reales del flujo DEMO_MODE con capturas escritorio y movil; coordinar turno exclusivo de verificacion
 PR: -
 Evidence: -
-Events: 2
+Events: 3
 Checkpoints: 0
 Sessions: 1
 Last-Checkpoint: 0
