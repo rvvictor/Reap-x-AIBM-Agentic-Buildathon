@@ -51,3 +51,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791607117 | HACK-010 | Finish only010; preserve approvedSHA and request human-queue integration, then pullmain and stop. | Why: Human authorized freeze correction and fetch/pullmain; no new tasks/claims. Rootmain fetched/pulled c47660d.
 - 1791609864 | HACK-018 | Use actual HACK010 API buttons and distinguish fixed table, localAPI and external sandbox | Why: Prevent stale DEMO instructions or simulated figures being presented as observed Reap success
 - 1791609944 | HACK-018 | Current UI API buttons and simulated provenance documented; no live checkout or recording claimed | Why: Pitch and recording script grounded in actual code
+- 1791610169 | HACK-018 | Human-authorized forge merge of independently approved d555547 after inherited Task-Base false scope gate | Why: Current-main diff exactly2authorized docs; Verify andsmoke freshPASS; CIgatesSUCCESS; reviewsebastian-2currentSHA
