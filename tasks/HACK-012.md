@@ -9,13 +9,13 @@ Priority: P0
 Paths: docs/SUBMISSION.md
 Depends: None
 Verify: `test -s docs/SUBMISSION.md`
-Lease-Until: 1791602356
-Updated: 1791599656
+Lease-Until: 1791603566
+Updated: 1791600866
 Task-Base: 83eca3623d11e90f5cd98681a5401ceca35c4407
-Next: Redactar docs/SUBMISSION.md desde IDEA.md
+Next: Pegar los 9 puntos oficiales, enlace del video, marcar checklist y pasar a REVIEW
 PR: -
 Evidence: -
-Events: 1
-Checkpoints: 0
+Events: 2
+Checkpoints: 1
 Sessions: 1
-Last-Checkpoint: 0
+Last-Checkpoint: 1791600866
