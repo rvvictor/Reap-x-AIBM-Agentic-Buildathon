@@ -33,3 +33,4 @@
 - 1791598389 | REVIEW | dylan-1 | heartbeat; lease until 1791612789
 - 1791598437 | REVIEW | dylan-1 | merge rechazado; Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 - 1791598584 | REVIEW | dylan-2 | review; approve; SHA 5117d67cbb5fcda42e9dae6c26f71ab34c55fc90; reviewer dylan-2
+- 1791598637 | REVIEW | sebastian-1 | review; reject; SHA 5117d67cbb5fcda42e9dae6c26f71ab34c55fc90; reviewer sebastian-1
