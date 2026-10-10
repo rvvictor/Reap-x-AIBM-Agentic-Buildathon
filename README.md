@@ -1,115 +1,127 @@
 # Bodega
 
-Dynamic per-product stock targets for small businesses, and group purchasing through one global agent.
+Stock objetivo dinámico por producto para negocios pequeños, y compras en grupo a través de un agente global.
 
-> Built for the **Reap x AIBM Agentic Buildathon** (Reap x AI Builders Mexico, 2026-10-09).
-> All business data, sales history and savings figures are **simulated** and labeled `demo_data: true`.
-> Reap is used in its **sandbox only**: no real money, no real cards.
+> Hecho para el **Reap x AIBM Agentic Buildathon** (Reap x AI Builders México, 2026-10-09). Equipo Axolutions.
+> Todos los datos de negocios, historiales de ventas y cifras de ahorro son **simulados** y llevan la etiqueta `demo_data: true`.
+> Reap se usa **solo en su sandbox**: sin dinero real y sin tarjetas reales.
 
-## What it does
+## Qué hace
 
-Small shops without distributor contracts keep a fixed stock level, so they either lose sales or tie up cash.
-Bodega fixes both sides:
+Los negocios pequeños sin contrato con distribuidores mantienen un stock fijo, así que pierden ventas o inmovilizan capital.
+Bodega ataca ambos lados:
 
-1. **Local agent (per business).** Computes a dynamic target stock per product from sales history,
-   season and nearby events, and explains why (`reasons[]`, `confidence`).
-2. **Global agent.** Groups the shortfalls of several businesses, compares suppliers by total delivered cost,
-   and splits the savings so that every business pays less than it would alone.
-3. **Control.** Each owner approves their own share within a budget cap. The agent never sees card data
-   and stops to ask for approval when a quote expires or stock runs out.
+1. **Agente local (uno por negocio).** Calcula un stock objetivo dinámico por producto a partir del historial de ventas,
+   la temporada y los eventos cercanos, y explica por qué (`reasons[]`, `confidence`).
+2. **Agente global.** Agrupa las faltas de varios negocios, compara proveedores por costo total entregado
+   y reparte el ahorro para que cada negocio pague menos que comprando solo.
+3. **Control.** Cada dueño autoriza su parte dentro de su tope de presupuesto. El agente nunca ve datos de tarjeta
+   y se detiene a pedir aprobación si la cotización vence o el monto no coincide con lo autorizado.
 
-The LLM never produces the key numbers. It only turns events and weather into schema-validated signals
-and writes explanations. Targets, savings and allocation are deterministic, tested code.
+El LLM nunca produce los números clave: solo convierte eventos y clima en señales validadas por esquema y redacta
+explicaciones. Los objetivos, el ahorro y el reparto son código determinista y probado.
 
-## Run the demo (no keys, no network)
+## Correr la demo (sin claves ni red)
 
-Requirements: [uv](https://docs.astral.sh/uv/) and Node.js.
+Requisitos: [uv](https://docs.astral.sh/uv/) y Node.js.
 
 ```bash
-cp .env.example .env            # DEMO_MODE defaults to true; no secrets needed
+cp .env.example .env            # DEMO_MODE es true por defecto; no se necesitan secretos
 uv sync
 npm --prefix web ci
 npm --prefix web run build
 uv run uvicorn app.main:app --port 8000
 ```
 
-Open <http://localhost:8000>. FastAPI serves the built frontend and the API from one process.
+Abre <http://localhost:8000>. FastAPI sirve el frontend compilado y la API desde un solo proceso.
 
-With `DEMO_MODE=true` nothing calls Reap or an LLM: recorded responses from `app/fixtures/` are used.
+Con `DEMO_MODE=true` nada llama a Reap ni a un LLM: se usan las respuestas grabadas de `app/fixtures/`.
+El estado de la demo vive en memoria: reinicia el servidor para repetirla desde cero.
 
-### Development
+### Desarrollo
 
 ```bash
 uv run uvicorn app.main:app --reload --port 8000
-npm --prefix web run dev        # http://localhost:5173, /api is proxied to FastAPI
+npm --prefix web run dev        # http://localhost:5173, /api se redirige a FastAPI
 ```
 
-Inside a UAK worktree the ports are `$UAK_PORT` (API) and `$UAK_PORT+1` (web).
+Dentro de un worktree de UAK los puertos son `$UAK_PORT` (API) y `$UAK_PORT+1` (web).
 
-## Configuration
+## Configuración
 
-Read from `.env` (git-ignored). Never commit keys. See `.env.example`.
+Se lee de `.env` (ignorado por git). Nunca subas claves. Ver `.env.example`.
 
-| Variable | Purpose |
+| Variable | Para qué sirve |
 |---|---|
-| `DEMO_MODE` | `true` (default): recorded fixtures, no network |
-| `REAP_API_KEY` | Reap sandbox key, only needed with `DEMO_MODE=false` |
-| `REAP_BASE_URL` | Defaults to `https://sandbox.api.reap.global` |
-| `REAP_VERSION` | `Reap-Version` header; the client falls back to `2025-02-14` |
-| `REAP_RETURN_URL` | HTTPS return URL required by Reap checkout |
-| `ANTHROPIC_API_KEY` | Only for live signal extraction |
+| `DEMO_MODE` | `true` (por defecto): fixtures grabados, sin red |
+| `REAP_API_KEY` | Llave del sandbox de Reap; solo con `DEMO_MODE=false` |
+| `REAP_BASE_URL` | Por defecto `https://sandbox.api.reap.global` |
+| `REAP_VERSION` | Encabezado `Reap-Version`; el cliente usa `2025-02-14` si falta |
+| `REAP_RETURN_URL` | URL HTTPS de retorno que exige el checkout de Reap |
+| `ANTHROPIC_API_KEY` | Solo para extraer señales con el LLM en vivo |
 
-The model ID is pinned in one place: `app/config.py`.
+El ID del modelo está fijado en un solo lugar: `app/config.py`.
 
-## The 6-step flow
+## El flujo de 6 pasos
 
-| # | Step | Endpoint | Status |
+| # | Paso | Endpoint | Estado |
 |---|---|---|---|
-| 1 | Pick a business, see base vs current stock | `GET /api/businesses/{id}/inventory` | UI with mock data only |
-| 2 | Predict stock: dynamic target, reasons, confidence | `POST /api/businesses/{id}/forecast` | Implemented |
-| 3 | Detect shortfalls across the 4 businesses | `POST /api/needs/publish` | Pending |
-| 4 | Global agent: supplier comparison and per-business savings | `POST /api/global/proposals` | In progress |
-| 5 | Each owner approves their share; sandbox checkout | `POST /api/global/proposals/{id}/approve` | Pending |
-| 6 | Quote expires or stock runs out: recalculate or stop | `POST /api/global/proposals/{id}/recheck` | Pending (P1) |
+| 1 | Elegir un negocio y ver su stock base vs actual | (sin endpoint todavía) | Pantalla con datos de ejemplo, no conectada a la API |
+| 2 | Predecir stock: objetivo dinámico, motivos y confianza | `POST /api/businesses/{id}/forecast` | Implementado (sin estado: recibe los productos en la petición) |
+| 3 | Detectar faltas en los 4 negocios y publicarlas | herramienta MCP `publicar_faltas` | Implementado por MCP; sin endpoint HTTP |
+| 4 | Agente global: comparación de proveedores y ahorro por negocio | `POST /api/global/proposals` | Implementado, con pantalla |
+| 5 | Cada dueño autoriza su parte; checkout en sandbox | `/api/payments/ledgers`, `/authorizations`, `/enrollments`, `/checkouts` | Implementado en DEMO_MODE, con pantalla (termina en `reconciled`) |
+| 6 | La cotización vence o se agota el stock: recalcular o detenerse | (dentro de `/api/payments/checkouts`) | Se detiene si la orden vence o el monto no coincide; sin recalculo automático |
 
-Signals (`GET /api/signals`, `POST /api/signals/extract`) feed step 2. Status reflects the repo when this
-was written; the source of truth is `uak status`.
+Las señales (`GET /api/signals`, `POST /api/signals/extract`) alimentan el paso 2.
+El servidor MCP (`python -m app.mcp`) expone `publicar_faltas`, `consultar_ofertas` y `proponer_compra`
+entre el agente local y el global; ver `app/mcp/README.md`.
 
-## Reap integration
+**Limitaciones conocidas.** Las pantallas del negocio y del agente global no comparten datos: la del negocio usa
+cifras de ejemplo y las cifras del pago compartido (2 negocios) no coinciden con las de la propuesta del agente
+global (4 negocios). Es una demo, no un flujo continuo único. La fuente de verdad del estado es `uak status`.
 
-Search, quote and checkout use the Reap Agentic API sandbox (`app/integrations/reap/`). Without a key the
-sandbox answers `401 INVALID_AUTH_HEADER`; those responses are recorded in `app/fixtures/reap/` and replayed in
-`DEMO_MODE`. A completed sandbox checkout has **not** been observed yet. Details in `docs/REAP-NOTES.md`.
+## Integración con Reap
 
-Volume pricing is not verified in Reap, so price tiers in the demo are simulated and labeled `demo_data`.
+La búsqueda, la cotización y el checkout usan el sandbox del Agentic API de Reap (`app/integrations/reap/`).
+Sin llave, el sandbox responde `401 INVALID_AUTH_HEADER`; esas respuestas están grabadas en `app/fixtures/reap/`
+y se reproducen en `DEMO_MODE`. **Todavía no se ha observado un checkout completado** en el sandbox real.
+Detalles en `docs/REAP-NOTES.md`.
 
-## Tests
+El precio por volumen no está verificado en Reap, así que las escalas de precio de la demo son simuladas y llevan `demo_data`.
+
+## Pruebas
 
 ```bash
 uv run pytest -q
-bash .uak/bin/smoke             # ruff + pytest + web lint + web build
+bash .uak/bin/smoke             # ruff + pytest + lint web + build web
 ```
 
-## Screenshots
+Prueba E2E del flujo en el navegador (movimiento reducido, con el servidor recién reiniciado):
 
-Captured from the running app in `DEMO_MODE` (all figures are simulated, `demo_data: true`).
-Regenerate them with `BASE_URL=http://localhost:8000 uv run --with playwright python e2e/demo_flow.py`
-(restart the server first: demo state lives in memory).
+```bash
+BASE_URL=http://localhost:8000 uv run --with playwright python e2e/demo_flow.py
+```
 
-| Business inventory and forecast (1280x720) | Global agent, shared payment (1280x720) | Mobile (390x844) |
+## Capturas
+
+Tomadas de la app corriendo en `DEMO_MODE` (todas las cifras son simuladas, `demo_data: true`).
+`e2e/demo_flow.py` las regenera en `e2e/screens/`.
+
+| Inventario y predicción del negocio (1280x720) | Agente global y pago compartido (1280x720) | Móvil (390x844) |
 |---|---|---|
-| ![Business](e2e/screens/1-negocio-1280x720.png) | ![Global agent](e2e/screens/2-agente-global-y-pago-1280x720.png) | ![Mobile](e2e/screens/3-movil-390x844.png) |
+| ![Negocio](e2e/screens/1-negocio-1280x720.png) | ![Agente global](e2e/screens/2-agente-global-y-pago-1280x720.png) | ![Móvil](e2e/screens/3-movil-390x844.png) |
 
-## Layout
+## Estructura
 
 ```
-app/            FastAPI: config, routers (auto-discovered), services, schemas, fixtures, integrations/reap
-web/            React + Vite; features under web/src/features/* are auto-discovered
-docs/           Idea, Reap notes, demo script
-e2e/            End-to-end run of the demo flow
+app/            FastAPI: config, routers (autodescubiertos), servicios, esquemas, fixtures, integrations/reap, mcp
+web/            React + Vite; las features de web/src/features/* se descubren solas
+docs/           Idea, notas de Reap, guion de la demo
+e2e/            Prueba E2E del flujo de la demo y sus capturas
 ```
 
-## Scope
+## Alcance
 
-Out of scope: businesses with distributor contracts, own logistics, recurring charges (mandates are not
-available), real purchases, complex perishables, travel and restricted categories.
+Fuera de alcance: negocios con contratos recurrentes con distribuidores, logística propia, cobros recurrentes
+(los mandates no están disponibles), compras reales, perecederos complejos, viajes y categorías restringidas.

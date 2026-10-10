@@ -9,7 +9,7 @@ Todas las cifras de la demo son **simuladas** (`demo_data: true`); no hay fuente
 - [ ] `npm --prefix web run build && uv run uvicorn app.main:app --port 8000`.
 - [ ] Navegador a 1280×720, animaciones reducidas. Abrir <http://localhost:8000>.
 - [ ] Verificar que los pasos 1-5 funcionan sin red (apaga el wifi una vez para confirmarlo).
-- [ ] Capturas reales de los pasos 2, 4 y 5 en `docs/img/` (pendiente: dependen de HACK-006/008/010).
+- [x] Capturas reales del flujo en `e2e/screens/` (1280x720 y 390x844), generadas por `e2e/demo_flow.py`.
 
 ## Guion (≈ 90 s)
 
