@@ -1,6 +1,6 @@
 # HACK-016
 ID: HACK-016
-State: CLAIMED
+State: REVIEW
 Owner: fernando-2
 Branch: feat/hack-016
 Worktree: /Users/FerV/Documents/REAP/Reap-x-AIBM-Agentic-Buildathon-wt/hack-016
@@ -9,9 +9,9 @@ Priority: P1
 Paths: web/src/features/settings/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791614179
-Updated: 1791611479
+Lease-Until: 1791626127
+Updated: 1791611727
 Task-Base: 6dfc3ae4ea63d61e6ab826f8ac46e05c4eea89c7
-Next: Crear el formulario con datos mock del contrato
-PR: -
+Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/22; run .uak/bin/smoke
+PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/22
 Evidence: -
