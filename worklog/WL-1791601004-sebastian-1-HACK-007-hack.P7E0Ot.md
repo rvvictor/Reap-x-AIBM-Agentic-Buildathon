@@ -6,7 +6,7 @@
 - Why: Existingtask criteria fulfilled without new dependencies/sharedfiles/paymentauth; independentplanreview privacy/concurrency findings addressed
 - Failing: Initialtests usedoldSDKaliases and nonexistentProposal.qty_total; fixed against actualSDK/canonicalmodel. No remaining Verify failures
 - Commands: q uv run pytest -q app/tests/test_mcp.py; q bash .uak/bin/smoke; uv run ruff check app/mcp app/tests/test_mcp.py; noLockregression reproduced lostupdates
-- Next: CurrentSHA independent approve then uakheartbeat+merge; recordintegration and refresh main
+- Next: Humano: Diff outside Paths: app/routers/payments.py (new test files: add the dir to Additive-Paths in PROJECT.md)
 
 ## History
 - 1791601004 | CLAIMED | sebastian-1 | claim; next: Esqueleto del servidor MCP con las 3 herramientas
@@ -18,3 +18,4 @@
 - 1791606151 | REVIEW | sebastian-1 | checkpoint; next: CurrentSHA independent approve then uakheartbeat+merge; recordintegration and refresh main
 - 1791606170 | REVIEW | sebastian-2 | review; approve; SHA 1bba610ca08dd365755ff1bf60c7fbdc3ad33163; reviewer sebastian-2
 - 1791606223 | REVIEW | sebastian-1 | heartbeat; lease until 1791620623
+- 1791606244 | REVIEW | sebastian-1 | merge rechazado; Diff outside Paths: app/routers/payments.py (new test files: add the dir to Additive-Paths in PROJECT.md)

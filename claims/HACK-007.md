@@ -12,6 +12,6 @@ Verify: `uv run pytest -q app/tests/test_mcp.py`
 Lease-Until: 1791620623
 Updated: 1791606223
 Task-Base: 4e2627ccf77c552ec5638beb65e3cc81a4effba5
-Next: CurrentSHA independent approve then uakheartbeat+merge; recordintegration and refresh main
+Next: Humano: Diff outside Paths: app/routers/payments.py (new test files: add the dir to Additive-Paths in PROJECT.md)
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/13
 Evidence: -
