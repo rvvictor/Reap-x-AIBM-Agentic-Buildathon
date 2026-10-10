@@ -1,6 +1,6 @@
 # HACK-011
 ID: HACK-011
-State: AVAILABLE
+State: CLAIMED
 Owner: victor-2
 Branch: feat/hack-011
 Worktree: /Users/victor/Documents/Proyectos/Reap-x-AIBM-Agentic-Buildathon-wt/hack-011
@@ -9,13 +9,13 @@ Priority: P0
 Paths: README.md, docs/DEMO.md, e2e/
 Depends: HACK-001
 Verify: `bash .uak/bin/smoke`
-Lease-Until: 0
-Updated: 1791608332
+Lease-Until: 1791611053
+Updated: 1791608353
 Task-Base: f08a4333938939e1a3da9ff8182839bf983da719
-Next: e2e/ y capturas cuando 006/008/010 estén en main
+Next: Traer main, probar flujo completo, e2e/ y capturas
 PR: -
 Evidence: -
-Events: 3
+Events: 4
 Checkpoints: 1
-Sessions: 3
+Sessions: 4
 Last-Checkpoint: 1791599996
