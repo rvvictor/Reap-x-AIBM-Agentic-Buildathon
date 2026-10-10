@@ -6,7 +6,7 @@
 - Why: Gate includes HACK001 upstream files from original Task-Base; current-main diff has only five allowed signals paths
 - Failing: MERGE_HUMAN HACK-005: Diff outside Paths: .env.example
 - Commands: uv run pytest -q app/tests/test_signals.py; bash .uak/bin/smoke; uak merge HACK-005; git diff --stat origin/main...HEAD
-- Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
+- Next: Humano: Approval missing, rejected, self-made or stale for the current SHA
 
 ## History
 - 1791596421 | CLAIMED | dylan-1 | claim; next: Definir el prompt y el validador de esquema Signal
@@ -35,3 +35,4 @@
 - 1791598584 | REVIEW | dylan-2 | review; approve; SHA 5117d67cbb5fcda42e9dae6c26f71ab34c55fc90; reviewer dylan-2
 - 1791598637 | REVIEW | sebastian-1 | review; reject; SHA 5117d67cbb5fcda42e9dae6c26f71ab34c55fc90; reviewer sebastian-1
 - 1791598646 | REVIEW | dylan-1 | heartbeat; lease until 1791613046
+- 1791598665 | REVIEW | dylan-1 | merge rechazado; Approval missing, rejected, self-made or stale for the current SHA
