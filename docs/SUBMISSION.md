@@ -10,7 +10,7 @@ Envío: https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop
 | Team captain | Fernando Vargas |
 | Contact email | vargas.fer2442@gmail.com |
 | Project link | https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon |
-| Demo video link | **PENDIENTE**: pegar el enlace de YouTube/Drive cuando exista (video de 1-2 min; plan B en `docs/demo-planb.mp4`) |
+| Demo video link | https://drive.google.com/drive/folders/1gcftspbgiJxqikfsjdwF6HRyvDFx5eGi?usp=sharing (carpeta de Drive con el video de 1:45; plan B local `docs/demo-planb.mp4`) |
 | Team members | Fernando Vargas, Victor Ruiz, Sebastian Jara, Javier Reyna, Dylan Martinez |
 | Sponsor prize tracks (máx. 2) | Reap Most Worthwhile Problem |
 
@@ -49,7 +49,7 @@ Los 9 puntos oficiales de https://aibuilders.mx/reap, más los pasos de envío. 
 
 Envío:
 - [x] Repo público enlazado (verificado: `gh repo view` → PUBLIC)
-- [ ] Video de demo de 1-2 min enlazado (plan B `docs/demo-planb.mp4`)
+- [x] Video de demo de 1-2 min enlazado (1:45, carpeta de Drive; falta confirmar que el enlace abre sin iniciar sesión)
 - [x] Descripción ≤ 5000 caracteres (2713)
 - [x] Track elegido: solo Track 1
 - [ ] Enviado por Fernando Vargas antes de las 23:39
