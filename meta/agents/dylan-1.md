@@ -1,10 +1,10 @@
 # dylan-1
 Agent: dylan-1
 Started: 1791596421
-Events: 4
-Events-Since-Checkpoint: 4
-Checkpoints: 0
+Events: 5
+Events-Since-Checkpoint: 0
+Checkpoints: 1
 Sessions: 1
-Last-Checkpoint: 0
+Last-Checkpoint: 1791596885
 Last-Session: dylan-1-1791596421
-Updated: 1791596864
+Updated: 1791596885

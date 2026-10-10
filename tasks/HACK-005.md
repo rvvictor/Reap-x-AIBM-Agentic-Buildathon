@@ -9,13 +9,13 @@ Priority: P0
 Paths: app/services/signals.py, app/routers/signals.py, app/fixtures/signals/, app/tests/test_signals.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_signals.py`
-Lease-Until: 1791599564
-Updated: 1791596864
+Lease-Until: 1791599585
+Updated: 1791596885
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Definir el prompt y el validador de esquema Signal
+Next: Open stacked draft PR, wait for HACK-001 integration and HACK-002 contract; resume Claude after local login
 PR: -
 Evidence: -
-Events: 4
-Checkpoints: 0
+Events: 5
+Checkpoints: 1
 Sessions: 1
-Last-Checkpoint: 0
+Last-Checkpoint: 1791596885
