@@ -1,6 +1,6 @@
 # HACK-010
 ID: HACK-010
-State: BLOCKED
+State: CLAIMED
 Owner: dylan-2
 Branch: feat/hack-010
 Worktree: /Users/dylanmartinezcastillo/Documents/Repositorios/Hackathon/Reap-x-AIBM-Agentic-Buildathon-wt/hack-010
@@ -12,6 +12,6 @@ Verify: `npm --prefix web run build`
 Lease-Until: 1791603211
 Updated: 1791600511
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Human freeze exception: apply /tmp/hack010-integration-fix.patch; rerun real browser/build/smoke; independent review; connect008 when published. Preserve draft until criteria pass.
+Next: Apply option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task
 PR: -
 Evidence: -

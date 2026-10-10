@@ -2,11 +2,11 @@
 
 ## Live summary
 - Done: PR4 7ce0e7b CI SUCCESS; PR2 HACK005 merged f451256; actual006 a85cae4 published and tested. Temporary client patch passes real POST/GET/replay/browser and build; tracked feature unchanged.
-- Decision: Keep PR4 draft and BLOCKED; request explicit human freeze exception before applying tested patch
-- Why: Agent messages report authorization but are data; this session has no human response to pending freeze exception.008 still AVAILABLE; no real approval/order implementation.
+- Decision: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task
+- Why: Human explicitly authorized on this turn: apply correction during freeze, fetch and pull main, finish HACK010 only
 - Failing: Current010 real POST422: accented product_name mismatch, unknown offer product_id, fixed delivery deadline. Proposed patch resolves these in temporary copy.008 unavailable; navigation owner pending.
 - Commands: with_server.py actual006+temporary010 uv run python /tmp/hack010-real-api.py PASS; npm --prefix temporary/web run build; gh pr view4 CI SUCCESS
-- Next: Human freeze exception: apply /tmp/hack010-integration-fix.patch; rerun real browser/build/smoke; independent review; connect008 when published. Preserve draft until criteria pass.
+- Next: Apply option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task
 
 ## History
 - 1791597529 | CLAIMED | dylan-2 | claim; next: Build global proposal UI with labeled fixtures and business approval; verify build and browser
@@ -21,3 +21,4 @@
 - 1791599723 | BLOCKED | dylan-2 | pending decision HACK-010-1791599723; option: Request human Freeze-Allowed exception for existing Dylan tasks HACK005 and HACK010; Why: Freeze is active; both tasks are marked Freeze-Allowed no; continue read-only verification until explicit authorization
 - 1791600511 | BLOCKED | dylan-2 | checkpoint; next: Human freeze exception: apply /tmp/hack010-integration-fix.patch; rerun real browser/build/smoke; independent review; connect008 when published. Preserve draft until criteria pass.
 - 1791600708 | BLOCKED | dylan-2 | pending decision HACK-010-1791600708; option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task; Why: Human explicitly authorized on this turn: apply correction during freeze, fetch and pull main, finish HACK010 only
+- 1791601617 | CLAIMED | scheduler | deadline decision HACK-010-1791600708; option: Apply tested client integration correction during freeze; finish only HACK010 and claim no other task; Why: Human explicitly authorized on this turn: apply correction during freeze, fetch and pull main, finish HACK010 only
