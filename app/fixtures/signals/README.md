@@ -1,0 +1,7 @@
+The fixture is synthetic (`demo_data: true`), not a recorded live model response or an observed weather forecast. Sources beginning with `demo:` identify simulated evidence. Its magnitudes are bounded demo inputs, not measured demand changes. Both fixture and live output pass the same validation.
+
+`GET /api/signals` serves the demo; `POST /api/signals/extract` accepts `sources` and allowed `categories`. In demo mode, POST uses the recorded evidence instead of the supplied sources and filters recorded signals to the requested categories. Each source supplies `source`, `kind`, `text`, timezone-aware `valid_from`/`valid_to`, and `demo_data`. Live extraction uses the configured `llm_model`, requires provider credentials supplied by the application's settings, and has a 25-second overall deadline. No real provider call was made during validation; live model availability remains unverified.
+
+The provisional Signal adapter follows `IDEA.md` pending HACK-002's shared contract: `direction` is `increase`/`decrease`; magnitude is a finite number in `[0, 1]`. Demo categories are `coffee`, `filters`, and `cups`. The model can only cite supplied evidence, use requested categories, and stay within its evidence's validity period. Evidence provenance overrides the model's `demo_data` label.
+
+API reference: https://platform.claude.com/docs/en/api/messages/create (consulted 2026-10-09). No external dataset or third-party assets are included.

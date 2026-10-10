@@ -1,0 +1,16 @@
+{
+  "demo_data": true,
+  "request": {
+    "categories": ["coffee", "filters", "cups"],
+    "sources": [
+      {"source": "demo:clima-frio", "kind": "weather", "text": "Escenario simulado: descenso de temperatura; mayor demanda de bebidas calientes.", "valid_from": "2026-10-09T00:00:00-06:00", "valid_to": "2026-10-16T00:00:00-06:00", "demo_data": true},
+      {"source": "demo:evento-cafeterias", "kind": "event", "text": "Escenario simulado: evento local cerca de cuatro cafeterías.", "valid_from": "2026-10-09T00:00:00-06:00", "valid_to": "2026-10-12T00:00:00-06:00", "demo_data": true}
+    ]
+  },
+  "response": {
+    "signals": [
+      {"id": "demo-cold-coffee", "kind": "weather", "categories": ["coffee", "filters"], "direction": "increase", "magnitude": 0.25, "source": "demo:clima-frio", "valid_from": "2026-10-09T00:00:00-06:00", "valid_to": "2026-10-16T00:00:00-06:00", "demo_data": true},
+      {"id": "demo-event-cups", "kind": "event", "categories": ["coffee", "cups"], "direction": "increase", "magnitude": 0.15, "source": "demo:evento-cafeterias", "valid_from": "2026-10-09T00:00:00-06:00", "valid_to": "2026-10-12T00:00:00-06:00", "demo_data": true}
+    ]
+  }
+}
