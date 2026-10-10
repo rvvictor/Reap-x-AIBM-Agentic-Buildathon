@@ -1,5 +1,5 @@
 ID: HACK-003
-State: MERGING
+State: HUMAN
 Owner: fernando-1
-Queued: 1791598952
-Reason: Waiting for queue
+Updated: 1791598978
+Reason: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)

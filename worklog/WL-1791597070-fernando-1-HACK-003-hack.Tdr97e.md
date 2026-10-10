@@ -6,7 +6,7 @@
 - Why: no hay clave en .env
 - Failing: -
 - Commands: uv run pytest -q app/tests/test_reap_client.py; bash .uak/bin/smoke
-- Next: Wait for review of SHA 3a9372e
+- Next: Humano: Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
 
 ## History
 - 1791597070 | CLAIMED | fernando-1 | claim; next: Pedir a Fernando la clave en su .env local y el valor de Reap-Version
@@ -23,3 +23,4 @@
 - 1791598588 | REVIEW | fernando-1 | heartbeat; lease until 1791612988
 - 1791598755 | REVIEW | fernando-1 | heartbeat; lease until 1791613155
 - 1791598922 | REVIEW | fernando-1 | heartbeat; lease until 1791613322
+- 1791598978 | REVIEW | fernando-1 | merge rechazado; Diff outside Paths: .env.example (new test files: add the dir to Additive-Paths in PROJECT.md)
