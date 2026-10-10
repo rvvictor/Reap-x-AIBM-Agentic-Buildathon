@@ -13,3 +13,4 @@
 - 1791597465 | CLAIMED | sebastian-2 | checkpoint; next: Coordinator confirms identity then contract/advisor plan review; implement three owned files only
 - 1791597900 | CLAIMED | sebastian-2 | heartbeat; lease until 1791600600
 - 1791597927 | CLAIMED | sebastian-2 | checkpoint; next: Separate HACK-006 identity from HACK-004 then implement global agent against canonical contract
+- 1791597996 | AVAILABLE | sebastian-2 | release; claim released by sebastian-2; reason: -; summary kept
