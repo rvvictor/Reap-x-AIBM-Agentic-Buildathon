@@ -9,9 +9,9 @@ Priority: P0
 Paths: app/services/global_agent.py, app/routers/global_agent.py, app/tests/test_global_agent.py
 Depends: None
 Verify: `uv run pytest -q app/tests/test_global_agent.py`
-Lease-Until: 1791600001
-Updated: 1791597301
+Lease-Until: 1791600165
+Updated: 1791597465
 Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
-Next: Leer IDEA.md y contrato vigente; implementar agrupación, ofertas y reparto en los Paths de HACK-006
+Next: Coordinator confirms identity then contract/advisor plan review; implement three owned files only
 PR: -
 Evidence: -

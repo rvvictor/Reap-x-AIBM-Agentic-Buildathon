@@ -1,10 +1,10 @@
 # sebastian-2
 Agent: sebastian-2
 Started: 1791597278
-Events: 3
-Events-Since-Checkpoint: 3
-Checkpoints: 0
-Sessions: 2
-Last-Checkpoint: 0
-Last-Session: sebastian-2-1791597278
-Updated: 1791597330
+Events: 4
+Events-Since-Checkpoint: 0
+Checkpoints: 1
+Sessions: 3
+Last-Checkpoint: 1791597465
+Last-Session: sebastian-2-1791597374
+Updated: 1791597465
