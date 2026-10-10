@@ -11,7 +11,7 @@ Append-only; added to .uak/TASKS.md from main. Why: adding tasks never waits for
 - **Uses contract:** HACK-002
 - **Related:** HACK-004
 - **Paths:** app/fixtures/pharmacy/, app/tests/test_pharmacy_fixture.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Fixture de una farmacia con 10 productos (paracetamol, antigripal, claritromicina, antiácido...) y ventas sintéticas con pico de frío, todo `demo_data: true`
   - El mismo motor de predicción corre sobre este negocio sin cambios de código
@@ -30,7 +30,7 @@ Append-only; added to .uak/TASKS.md from main. Why: adding tasks never waits for
 - **Uses contract:** HACK-002
 - **Related:** HACK-004
 - **Paths:** app/services/backtest.py, app/routers/backtest.py, app/tests/test_backtest.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Compara ventas perdidas y sobrante entre stock fijo y objetivo dinámico sobre el historial simulado
   - El resultado se etiqueta como simulado y muestra la fórmula usada
