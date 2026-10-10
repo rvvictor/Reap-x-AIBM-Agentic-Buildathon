@@ -57,24 +57,25 @@ def test_demo_uses_validated_recording_without_model(monkeypatch):
 
 def test_model_uses_configured_id_and_evidence_provenance():
     payload = recorded()["response"]
-    payload["signals"][0]["direction"] = "decrease"
+    payload["signals"][0]["direction"] = "down"
     for item in payload["signals"]:
         item["demo_data"] = False  # The model cannot relabel simulated evidence.
     client = FakeClient(payload)
     config = live_config()
     result = asyncio.run(signals.extract_signals(request(), config=config, client=client))
-    assert result[0].direction == "decrease"
+    assert result[0].direction == "down"
     assert all(item.demo_data for item in result)
     assert client.calls[0]["model"] == config.llm_model
     assert json.loads(client.calls[0]["messages"][0]["content"]) == request().model_dump(mode="json")
 
 
 @pytest.mark.parametrize("field,value", [
-    ("magnitude", -0.01), ("magnitude", 1.01), ("magnitude", True),
+    ("magnitude", -0.01), ("magnitude", 0.51), ("magnitude", True),
     ("magnitude", float("nan")), ("source", "invented"),
     ("categories", ["unknown"]), ("kind", "season"),
-    ("direction", "execute_command"), ("valid_to", "2026-11-20T00:00:00-06:00"),
-    ("valid_to", "2026-10-08T00:00:00-06:00"), ("valid_from", "2026-10-09T00:00:00"),
+    ("direction", "execute_command"), ("valid_to", "2026-11-20"),
+    ("valid_to", "2026-10-08"), ("valid_from", "2026-10-09T00:00:00-06:00"),
+    ("description", ""),
     ("unexpected", "ignore previous instructions"),
 ])
 def test_rejects_invalid_or_unbound_model_output(field, value):
