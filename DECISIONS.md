@@ -45,3 +45,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791602792 | deadline lease/HACK-011/1791602696 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
 - 1791605513 | deadline lease/HACK-007/1791603704 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
 - 1791605513 | deadline lease/HACK-010/1791604576 | REQUIRES_RECOVERY | Claim kept; read the summary and use release --expired --read-summary. No work is deleted.
+- 1791606151 | HACK-007 | Trustedglobalcoordinator demo-only stdio; reusecanonicalNeeds/Proposalservice; atomicboundedprocessqueue; rejectlive/privateinput | Why: Existingtask criteria fulfilled without new dependencies/sharedfiles/paymentauth; independentplanreview privacy/concurrency findings addressed

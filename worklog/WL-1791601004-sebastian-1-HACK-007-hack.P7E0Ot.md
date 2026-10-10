@@ -1,12 +1,12 @@
 # worklog/WL-1791601004-sebastian-1-HACK-007-hack.P7E0Ot.md · HACK-007
 
 ## Live summary
-- Done: 1bba610ca08dd365755ff1bf60c7fbdc3ad33163; q uv run pytest -q app/tests/test_mcp.py exit0 12tests; q smoke exit0 PRODUCT_PASS; scopedRuffpass; realstdio localNeed->globalProposal and live/private rejection/processisolation/concurrentpublishing verified; HTTPfallback documented; fiveallowedfiles
-- Decision: Use fast independent plan and done review under conserve fast-only; retain real protocol tests and independent current-SHA approval
-- Why: Strong checkpoint instruction conflicts with conserve fast-only. Trusted coordinator demo wrapper reuses reviewed global pricing and never authorizes checkout; source boundary documented and tested
-- Failing: No validation run yet
-- Commands: `uv run pytest -q app/tests/test_mcp.py`
-- Next: Another agent reviews https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/13; run .uak/bin/smoke
+- Done: MCPstdio3tools implemented and committed1bba610;12tests+smokePASS; PR13 published, independentreview in progress
+- Decision: Trustedglobalcoordinator demo-only stdio; reusecanonicalNeeds/Proposalservice; atomicboundedprocessqueue; rejectlive/privateinput
+- Why: Existingtask criteria fulfilled without new dependencies/sharedfiles/paymentauth; independentplanreview privacy/concurrency findings addressed
+- Failing: Initialtests usedoldSDKaliases and nonexistentProposal.qty_total; fixed against actualSDK/canonicalmodel. No remaining Verify failures
+- Commands: q uv run pytest -q app/tests/test_mcp.py; q bash .uak/bin/smoke; uv run ruff check app/mcp app/tests/test_mcp.py; noLockregression reproduced lostupdates
+- Next: CurrentSHA independent approve then uakheartbeat+merge; recordintegration and refresh main
 
 ## History
 - 1791601004 | CLAIMED | sebastian-1 | claim; next: Esqueleto del servidor MCP con las 3 herramientas
@@ -15,3 +15,4 @@
 - 1791605574 | CLAIMED | sebastian-1 | heartbeat; lease until 1791608274
 - 1791606051 | CLAIMED | sebastian-1 | heartbeat; lease until 1791608751
 - 1791606144 | REVIEW | sebastian-1 | done; PR https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/13; evidence: 1bba610ca08dd365755ff1bf60c7fbdc3ad33163; q uv run pytest -q app/tests/test_mcp.py exit0 12tests; q smoke exit0 PRODUCT_PASS; scopedRuffpass; realstdio localNeed->globalProposal and live/private rejection/processisolation/concurrentpublishing verified; HTTPfallback documented; fiveallowedfiles; reviewer: -
+- 1791606151 | REVIEW | sebastian-1 | checkpoint; next: CurrentSHA independent approve then uakheartbeat+merge; recordintegration and refresh main
