@@ -6,7 +6,7 @@
 - Why: HACK-008 no está reclamada aquí
 - Failing: -
 - Commands: uv run pytest -q app/tests/test_reap_client.py; bash .uak/bin/smoke
-- Next: Wait for review of SHA 1b4b92b
+- Next: Integrated in main: 93560fea4fa4723f9c6d47fca4c896eecaa552c8 (recorded by sebastian-coordinator)
 
 ## History
 - 1791597070 | CLAIMED | fernando-1 | claim; next: Pedir a Fernando la clave en su .env local y el valor de Reap-Version
@@ -30,3 +30,4 @@
 - 1791599524 | REVIEW | fernando-1 | checkpoint; next: Wait for review of SHA 1b4b92b
 - 1791599531 | REVIEW | dylan-1 | review; approve; SHA 1b4b92bef57814e9581ab6ca6c2781c5afcc6fa7; reviewer dylan-1
 - 1791599531 | REVIEW | fernando-1 | heartbeat; lease until 1791613931
+- 1791599722 | INTEGRATED | sebastian-coordinator | integrate; recorded by sebastian-coordinator; PR https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/5; merged 93560fea4fa4723f9c6d47fca4c896eecaa552c8; proof ancestry
