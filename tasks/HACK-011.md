@@ -9,13 +9,13 @@ Priority: P0
 Paths: README.md, docs/DEMO.md, e2e/
 Depends: HACK-001
 Verify: `bash .uak/bin/smoke`
-Lease-Until: 1791602373
-Updated: 1791599673
+Lease-Until: 1791602696
+Updated: 1791599996
 Task-Base: f08a4333938939e1a3da9ff8182839bf983da719
-Next: Redactar README (EN) y docs/DEMO.md con guion; e2e del flujo de 6 pasos cuando 006/008/010 estén en main
+Next: e2e/ y capturas cuando 006/008/010 estén en main
 PR: -
 Evidence: -
-Events: 1
-Checkpoints: 0
-Sessions: 1
-Last-Checkpoint: 0
+Events: 2
+Checkpoints: 1
+Sessions: 2
+Last-Checkpoint: 1791599996
