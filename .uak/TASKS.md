@@ -130,7 +130,7 @@ State lives on the `claims` branch (`uak status`); this file holds only tasks.
 - **Uses contract:** HACK-002
 - **Related:** HACK-004, HACK-006
 - **Paths:** app/mcp/, app/tests/test_mcp.py
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - Herramientas `publicar_faltas`, `consultar_ofertas`, `proponer_compra` expuestas por MCP
   - El agente local publica una falta y el global la recibe en una prueba
