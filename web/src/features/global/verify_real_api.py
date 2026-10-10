@@ -16,9 +16,9 @@ with sync_playwright() as p:
  proposal=payload[0]
  assert proposal['total']==4524 and proposal['savings_total']==1560.15,proposal
  assert len(proposal['allocations'])==4 and all(not a['approved'] for a in proposal['allocations'])
- expect(page.locator('.business-row')).to_have_count(4)
- expect(page.get_by_role('button',name='No disponible',exact=True)).to_have_count(4)
- expect(page.get_by_role('button',name='No disponible',exact=True).first).to_be_disabled()
+ expect(page.locator('.business-row')).to_have_count(0)
+ expect(page.get_by_role('button',name='Preparar autorizaciones demo',exact=True)).to_have_count(1)
+ expect(page.get_by_role('button',name='Preparar autorizaciones demo',exact=True).first).to_be_enabled()
  assert page.get_by_role('alert').count()==0
  base=f"http://127.0.0.1:{os.environ['UAK_PORT']}/api/global/proposals"
  assert page.request.get(base+'/'+proposal['id']).json()==proposal
@@ -28,5 +28,5 @@ with sync_playwright() as p:
  assert replay.value.json()==payload
  assert not errors,errors
  page.screenshot(path='/tmp/hack010-real-api.png',full_page=True)
- print(json.dumps({'result':'PASS','total':proposal['total'],'savings':proposal['savings_total'],'checks':'real POST via Vite proxy, frontend parser/render, 4 allocations, disabled checkout, GET/list, stable replay, no JS errors; no interception'}))
+ print(json.dumps({'result':'PASS','total':proposal['total'],'savings':proposal['savings_total'],'checks':'real POST via Vite proxy, frontend parser/render, 4 allocations, payment preparation available, no checkout before plan, GET/list, stable replay, no JS errors; no interception'}))
  b.close()

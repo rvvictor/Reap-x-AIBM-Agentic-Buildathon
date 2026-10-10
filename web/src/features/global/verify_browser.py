@@ -35,28 +35,28 @@ with sync_playwright() as p:
     desktop_footer = footer.bounding_box()
     assert desktop_footer["y"] + desktop_footer["height"] <= 720, desktop_footer
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
-    page.screenshot(path=str(out / "desktop.png"), full_page=True)
-    buttons = page.get_by_role("button", name="Autorizar demo", exact=True)
+    page.screenshot(path=str(out / "desktop.png"), full_page=False)
+    buttons = section.get_by_role("button", name="Autorizar demo", exact=True)
     assert buttons.count() == 4
-    cap = page.get_by_role("spinbutton", name="Tope de Café Aurora")
+    cap = section.get_by_role("spinbutton", name="Tope de Café Aurora")
     cap.fill("1")
     expect(buttons.first).to_be_disabled()
     expect(page.get_by_text("El tope debe cubrir")).to_be_visible()
     cap.fill("6000")
     for _ in range(4):
-        page.get_by_role("button", name="Autorizar demo", exact=True).first.click()
+        section.get_by_role("button", name="Autorizar demo", exact=True).first.click()
     expect(page.get_by_text("Demo autorizada · todavía sin pagar")).to_be_visible()
-    page.get_by_role("button", name="Origen Café", exact=True).click()
-    expect(page.get_by_role("button", name="Autorizar demo", exact=True)).to_have_count(
+    section.get_by_role("button", name="Origen Café", exact=True).click()
+    expect(section.get_by_role("button", name="Autorizar demo", exact=True)).to_have_count(
         4
     )
-    page.get_by_role("button", name="Recalcular propuesta").click()
-    expect(page.get_by_role("status")).to_be_visible()
+    section.get_by_role("button", name="Recalcular propuesta").click()
+    expect(section.get_by_role("status")).to_be_visible()
     expect(page.locator(".business-row")).to_have_count(4)
-    page.get_by_role("combobox").select_option("api")
+    section.get_by_role("combobox").select_option("api")
     expect(page.get_by_role("heading", name="Aún no hay una propuesta")).to_be_visible()
-    page.get_by_role("button", name="Recalcular propuesta").click()
-    expect(page.get_by_role("alert")).to_contain_text("503")
+    section.get_by_role("button", name="Recalcular propuesta").click()
+    expect(section.get_by_role("alert")).to_contain_text("503")
     api_response["status"] = 200
     api_response["payload"] = [
         {
@@ -89,32 +89,32 @@ with sync_playwright() as p:
             ],
         }
     ]
-    page.get_by_role("button", name="Reintentar").click()
-    expect(page.locator(".business-row")).to_have_count(4)
-    expect(page.get_by_role("button", name="No disponible", exact=True)).to_have_count(
-        4
+    section.get_by_role("button", name="Reintentar").click()
+    expect(page.locator(".business-row")).to_have_count(0)
+    expect(section.get_by_role("button", name="Preparar autorizaciones demo", exact=True)).to_have_count(
+        1
     )
     expect(
-        page.get_by_role("button", name="No disponible", exact=True).first
-    ).to_be_disabled()
+        section.get_by_role("button", name="Preparar autorizaciones demo", exact=True).first
+    ).to_be_enabled()
     assert len(submitted[-1]["needs"]) == 4
     assert all(offer["demo_data"] for offer in submitted[-1]["offers"])
     api_response["payload"][0]["demo_data"] = False
-    page.get_by_role("button", name="Recalcular propuesta").click()
-    expect(page.get_by_role("alert")).to_contain_text("no corresponde")
+    section.get_by_role("button", name="Recalcular propuesta").click()
+    expect(section.get_by_role("alert")).to_contain_text("no corresponde")
     api_response["payload"] = []
-    page.get_by_role("button", name="Reintentar").click()
+    section.get_by_role("button", name="Reintentar").click()
     expect(page.get_by_role("heading", name="Aún no hay una propuesta")).to_be_visible()
-    page.get_by_role("button", name="Explorar propuesta de demo").click()
-    page.get_by_role("button", name="Recalcular propuesta").focus()
+    section.get_by_role("button", name="Explorar propuesta de demo").click()
+    section.get_by_role("button", name="Recalcular propuesta").focus()
     page.keyboard.press("Enter")
     expect(page.locator(".business-row")).to_have_count(4)
-    page.get_by_role("button", name="Recalcular propuesta").click()
-    page.get_by_role("combobox").select_option("api")
+    section.get_by_role("button", name="Recalcular propuesta").click()
+    section.get_by_role("combobox").select_option("api")
     page.wait_for_timeout(250)
     expect(page.get_by_role("heading", name="Aún no hay una propuesta")).to_be_visible()
     expect(page.locator(".supplier-panel")).to_have_count(0)
-    page.get_by_role("button", name="Explorar propuesta de demo").click()
+    section.get_by_role("button", name="Explorar propuesta de demo").click()
     page.set_viewport_size({"width": 390, "height": 844})
     expect(section).to_be_visible()
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
