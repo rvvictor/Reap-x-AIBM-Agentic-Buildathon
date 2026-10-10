@@ -1,6 +1,6 @@
 # STATE
 
-Phase: feature freeze; authorized fixes, rehearsal and submission only
+Phase: execution
 Updated: 1791607068
 AVAILABLE: HACK-013 HACK-014 HACK-015 HACK-016 HACK-017 HACK-019 HACK-012 HACK-018 
 CLAIMED: HACK-011 
