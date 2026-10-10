@@ -9,9 +9,9 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791620863
-Updated: 1791606463
+Lease-Until: 1791621054
+Updated: 1791606654
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Humano: Missing verifiable approval on claims
+Next: Existing reviewer records approvalSHA7f2d278 or human authorizes independentreviewerrole; rerunmerge; verifymergedmain; stop/nootherclaims.
 PR: https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/4
 Evidence: -
