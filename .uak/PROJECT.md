@@ -8,9 +8,9 @@
 | Event / challenge | Reap x AI Builders Mexico Agentic Buildathon · https://aibuilders.mx/reap |
 | Start | 2026-10-09 17:00 America/Mexico_City |
 | Official deadline | 2026-10-09 21:00 America/Mexico_City · platforms: Gavel form https://gavel-65labs.vercel.app/submit/74oz5tv1cfzllzh392gy1rqzvx4m1vop |
-| Freeze | 20:00 (deadline − 1 h; compressed, the 4 h event makes the standard −6 h fall before the start) → `Freeze-Epoch` |
-| Clean rehearsal / plan B | 19:30 (deadline − 1 h 30) |
-| Internal submission | 20:30 (deadline − 30 min) |
+| Freeze | 20:30 (deadline − 30 min; compressed, the 4 h event makes the standard −6 h fall before the start) → `Freeze-Epoch` |
+| Clean rehearsal / plan B | 20:00 (deadline − 1 h) |
+| Internal submission | 20:40 (deadline − 20 min) |
 | Humans | Fernando Vargas: team captain, receives the Reap API key via Telegram; Victor Ruiz; Sebastian Jara; Javier Reyna; Dylan Martinez · submission owner: Fernando Vargas |
 | Agents | TBD per human (max 2) |
 | Machines | laptops · ports already taken: none known |
@@ -36,20 +36,20 @@ Judging criteria and weights are NOT published (unverified). Proxy rows come fro
 | Support | Telegram channel; Jose (Reap) technical, Adrian escalation | https://aibuilders.mx/reap |
 
 ## Plan B
-- A video of the whole flow at `docs/demo-planb.mp4` (v1 at 19:00, final at 19:30). Use it if network or the Reap sandbox API fails.
+- A video of the whole flow at `docs/demo-planb.mp4` (v1 at 19:45, final at 20:00). Use it if network or the Reap sandbox API fails.
 
 ## Executable config
 A human sets `yes`. A missing field means `no`.
 
 ```text
 Mode: sprint
-Backlog-Proposed-Epoch: 0
+Backlog-Proposed-Epoch: 1791595398
 Backlog-Approved: no
 Autonomy: yes
 Auto-Merge: yes
 Review-Mode: claims
 Plan-Channel: claims
-Freeze-Epoch: 1791597656
+Freeze-Epoch: 1791599456
 Lease-Seconds: 2700
 Review-Lease-Seconds: 14400
 Events-Per-Session: 100
@@ -66,5 +66,5 @@ Subagents-Per-Machine: 8
 Subagent-Burst-Per-Minute: 6
 Max-Worktree-Agents: 6
 Blackbox: on
-Additive-Paths: -
+Additive-Paths: app/tests/, e2e/
 ```
