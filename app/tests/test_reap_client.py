@@ -82,6 +82,29 @@ def test_live_headers_for_search_quote_and_checkout() -> None:
     assert checkout.headers["Authorization"].startswith("Bearer ")
 
 
+def test_client_reads_dotenv_like_settings(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.chdir(tmp_path)
+    for name in ("DEMO_MODE", "REAP_API_KEY", "REAP_VERSION", "REAP_BASE_URL", "REAP_RETURN_URL"):
+        monkeypatch.delenv(name, raising=False)
+    (tmp_path / ".env").write_text(
+        "DEMO_MODE=false\n"
+        "REAP_API_KEY=synthetic-test-key\n"
+        "REAP_VERSION=2025-02-14\n"
+        "REAP_BASE_URL=https://sandbox.api.reap.global\n"
+        "REAP_RETURN_URL=https://example.invalid/return\n",
+        encoding="utf-8",
+    )
+    from app.config import Settings
+
+    cfg = Settings()
+    client = ReapClient()
+    assert client.api_key == cfg.reap_api_key == "synthetic-test-key"
+    assert client.demo_mode is cfg.demo_mode is False
+    assert client.version == (cfg.reap_version or DOCUMENTED_REAP_VERSION)
+    assert client.base_url == cfg.reap_base_url.rstrip("/")
+    assert client.return_url == cfg.reap_return_url
+
+
 def test_recorded_fixtures_match_files_on_disk() -> None:
     for name in ("search_coffee.json", "quote.json", "checkout.json"):
         payload = json.loads((FIXTURE_DIR / name).read_text(encoding="utf-8"))

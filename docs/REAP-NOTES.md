@@ -14,7 +14,7 @@ If `REAP_VERSION` is empty, the client sends `2025-02-14`.
 
 | Header | Where |
 |---|---|
-| `Authorization: Bearer <REAP_API_KEY>` | Every live call. The key is read only from the environment. An empty key raises `ReapConfigError` and does not send a request. |
+| `Authorization: Bearer <REAP_API_KEY>` | Every live call. `ReapClient()` reads `app.config.Settings`, which loads `.env`. An empty key raises `ReapConfigError` and does not send a request. |
 | `Reap-Version` | Every live call. |
 | `Idempotency-Key` | `POST /agentic/quotes` and `POST /agentic/checkouts`. Search does not require it in the OpenAPI parameters. |
 | `X-Simulate-Checkout: COMPLETED` | Checkout only. Sandbox header from [one-time purchases](https://docs.reap.global/agentic-payments/one-time-purchases). |

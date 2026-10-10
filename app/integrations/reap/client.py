@@ -1,19 +1,20 @@
 """HTTP client for the Reap Agentic Payments sandbox.
 
-The API key is read only from the environment. Recorded responses in
-``app/fixtures/reap/`` are used when ``DEMO_MODE`` is true.
+Live calls read ``app.config.Settings``, which loads ``.env``. Recorded
+responses in ``app/fixtures/reap/`` are used when ``DEMO_MODE`` is true.
 """
 
 from __future__ import annotations
 
 import json
-import os
 import uuid
 from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
 import httpx
+
+from app.config import Settings
 
 DOCUMENTED_REAP_VERSION = "2025-02-14"
 DEFAULT_BASE_URL = "https://sandbox.api.reap.global"
@@ -32,12 +33,19 @@ class ReapClient:
         environ: Mapping[str, str] | None = None,
         timeout: float = 30.0,
     ) -> None:
-        env = os.environ if environ is None else environ
-        self.api_key = env.get("REAP_API_KEY", "")
-        self.version = env.get("REAP_VERSION") or DOCUMENTED_REAP_VERSION
-        self.base_url = (env.get("REAP_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
-        self.return_url = env.get("REAP_RETURN_URL") or "https://example.invalid/return"
-        self.demo_mode = env.get("DEMO_MODE", "true").strip().lower() in {"1", "true", "yes"}
+        if environ is None:
+            cfg = Settings()
+            self.api_key = cfg.reap_api_key
+            self.version = cfg.reap_version or DOCUMENTED_REAP_VERSION
+            self.base_url = cfg.reap_base_url.rstrip("/")
+            self.return_url = cfg.reap_return_url
+            self.demo_mode = cfg.demo_mode
+        else:
+            self.api_key = environ.get("REAP_API_KEY", "")
+            self.version = environ.get("REAP_VERSION") or DOCUMENTED_REAP_VERSION
+            self.base_url = (environ.get("REAP_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
+            self.return_url = environ.get("REAP_RETURN_URL") or "https://example.invalid/return"
+            self.demo_mode = environ.get("DEMO_MODE", "true").strip().lower() in {"1", "true", "yes"}
         self._timeout = timeout
         self._transport = transport
 
