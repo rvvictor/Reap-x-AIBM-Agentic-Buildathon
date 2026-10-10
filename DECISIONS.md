@@ -59,3 +59,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791610795 | HACK-013 | Calibrated synthetic pharmacy scenario uses unchanged canonical engine/router and explicit businessbudget | Why: Generalization demonstrated without production edits or measuredaccuracy claims
 - 1791610960 | HACK-013 | Completed onlyHACK013 from requested13to19 range; reproducible synthetic data calibrated not clinical/accuracy evidence | Why: Meets all task criteria with canonical contracts and no sharedcode modifications
 - 1791611194 | authorization | Fernando | HACK-015 -> fernando-1. Human explicitly said ignore the freeze and do HACK-015. Freeze-Allowed set to yes for this task only.
+- 1791611313 | authorization | Fernando | HACK-016 -> fernando-2. Human asked to run HACK-016 in parallel with HACK-015. Freeze-Allowed set to yes for this task only.

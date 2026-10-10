@@ -68,7 +68,7 @@ Append-only; added to .uak/TASKS.md from main. Why: adding tasks never waits for
 - **Uses contract:** HACK-002
 - **Related:** HACK-009
 - **Paths:** web/src/features/settings/
-- **Freeze-Allowed:** no
+- **Freeze-Allowed:** yes
 - **Acceptance:**
   - El dueño edita stock base, mínimo, máximo y presupuesto por producto
   - Estados vacío, cargando y error; se ve a 1280×720 y a 390×844
