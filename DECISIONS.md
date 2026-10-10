@@ -63,3 +63,4 @@ Why: a reversible option after 15 min keeps work moving.
 - 1791611482 | HACK-012 | Human explicitly requested unclaim; preserve existing draft and release task | Why: User cancellation takes precedence; video still unpublished per human, no completed submission claimed
 - 1791611515 | HACK-015 | pure checks plus in-memory audit; caller must honor stop | Why: budget, substitution, max qty and price drift are testable without touching payments
 - 1791611835 | HACK-012 | mp4 y script de video fuera del PR (fuera de Paths) | Why: Paths solo docs/SUBMISSION.md
+- 1791611803 | HACK-014 | Synthetic daily independent replenishment; no carryover or historical signals; strict sales earlier than evaluated day | Why: Avoid temporal leakage and unsupported claims; shared forecast004 unchanged
