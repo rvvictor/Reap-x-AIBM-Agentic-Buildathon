@@ -1,6 +1,6 @@
 # HACK-010
 ID: HACK-010
-State: CLAIMED
+State: BLOCKED
 Owner: dylan-2
 Branch: feat/hack-010
 Worktree: /Users/dylanmartinezcastillo/Documents/Repositorios/Hackathon/Reap-x-AIBM-Agentic-Buildathon-wt/hack-010
@@ -9,8 +9,8 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791601422
-Updated: 1791598722
+Lease-Until: 1791601826
+Updated: 1791599126
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Apply option: Compact desktop typography with explicit line-height and spacing in owned feature CSS
 PR: -

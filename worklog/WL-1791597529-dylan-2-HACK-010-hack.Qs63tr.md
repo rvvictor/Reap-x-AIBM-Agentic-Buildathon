@@ -4,7 +4,7 @@
 - Done: PR4 b5c16e6; API adapter wired to contract127; build+smoke+browser PASS; critic SHIP; versioned browser regression checks
 - Decision: Compact desktop typography with explicit line-height and spacing in owned feature CSS
 - Why: Browser footer overflows; inherited line height makes small text rows too tall. Advisor experiment reduced overflow but did not resolve it.
-- Failing: Live endpoint unverified; authorization/order status unavailable; app feature navigation pending owner
+- Failing: Backend HACK006 endpoint not published for integration; HACK008 authorization/order status unavailable; CI smoke fails uv command not found. Draft PR4 b5c16e6; local build/smoke/browser PASS.
 - Commands: npm --prefix web run build; bash .uak/bin/smoke; uv run python web/src/features/global/verify_browser.py via with_server.py
 - Next: Apply option: Compact desktop typography with explicit line-height and spacing in owned feature CSS
 
@@ -16,3 +16,4 @@
 - 1791598272 | CLAIMED | dylan-2 | heartbeat; lease until 1791600972
 - 1791598722 | CLAIMED | dylan-2 | checkpoint; next: Confirm final HACK006 contract+SHA; integration check exact request; HACK008 real approval/order wiring; ready PR only after criteria
 - 1791598844 | CLAIMED | scheduler | deadline decision HACK-010-1791597914; option: Compact desktop typography with explicit line-height and spacing in owned feature CSS; Why: Browser footer overflows; inherited line height makes small text rows too tall. Advisor experiment reduced overflow but did not resolve it.
+- 1791599126 | BLOCKED | dylan-2 | Backend HACK006 endpoint not published for integration; HACK008 authorization/order status unavailable; CI smoke fails uv command not found. Draft PR4 b5c16e6; local build/smoke/browser PASS.
