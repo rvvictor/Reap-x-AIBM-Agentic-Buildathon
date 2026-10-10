@@ -20,3 +20,4 @@
 - 1791597532 | REVIEW | dylan-1 | checkpoint; next: Review PR2 final SHA; integrate after approval; continue HACK010
 - 1791597724 | REVIEW | dylan-1 | checkpoint; next: Update PR2 body, commit/push and notify reviewer of SHA
 - 1791597748 | REVIEW | dylan-1 | checkpoint; next: Wait for PR2 review; integrate only after approval
+- 1791597868 | REVIEW | dylan-2 | review; reject; SHA a24db245018a9815db7beb2078f0bd6c7f5f415b; reviewer dylan-2
