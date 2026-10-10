@@ -9,13 +9,13 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791601826
-Updated: 1791599126
+Lease-Until: 1791601831
+Updated: 1791599131
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
-Next: Apply option: Compact desktop typography with explicit line-height and spacing in owned feature CSS
+Next: Resume when006 SHA published; test exact request against actual server; connect008 real approval/order endpoints; rerun checks and readyPR4
 PR: -
 Evidence: -
-Events: 8
-Checkpoints: 2
+Events: 9
+Checkpoints: 3
 Sessions: 2
-Last-Checkpoint: 1791598722
+Last-Checkpoint: 1791599131
