@@ -36,3 +36,4 @@
 - 1791598637 | REVIEW | sebastian-1 | review; reject; SHA 5117d67cbb5fcda42e9dae6c26f71ab34c55fc90; reviewer sebastian-1
 - 1791598646 | REVIEW | dylan-1 | heartbeat; lease until 1791613046
 - 1791598665 | REVIEW | dylan-1 | merge rechazado; Approval missing, rejected, self-made or stale for the current SHA
+- 1791598788 | REVIEW | dylan-1 | pending decision HACK-005-1791598788; option: Finish canonical Signal import and direct fixture category alignment from published HACK-002 contract under critical pace; no strong subagent capacity available; Why: Task criterion and reviewer reproduction require canonical categories; preserve existing extraction validation and verify regression against loader
