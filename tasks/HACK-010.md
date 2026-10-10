@@ -9,13 +9,13 @@ Priority: P0
 Paths: web/src/features/global/
 Depends: HACK-001
 Verify: `npm --prefix web run build`
-Lease-Until: 1791600795
-Updated: 1791598095
+Lease-Until: 1791600972
+Updated: 1791598272
 Task-Base: ad78650968d2fcbeba7283e1d54b377ac71d93cd
 Next: Receive HACK006/008 contracts; connect APIs, rerun browser+Verify+smoke, ready PR
 PR: -
 Evidence: -
-Events: 4
+Events: 5
 Checkpoints: 1
 Sessions: 2
 Last-Checkpoint: 1791598095
