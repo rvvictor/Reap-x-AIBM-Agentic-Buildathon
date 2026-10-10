@@ -15,7 +15,7 @@ Task-Base: 109a4f99f3b5706b5d4178528d1c6420def44419
 Next: Poner REAP_API_KEY en .env del worktree y repetir search/quote/checkout; smoke cuando HACK-001 esté en main
 PR: -
 Evidence: -
-Events: 7
+Events: 8
 Checkpoints: 1
 Sessions: 1
 Last-Checkpoint: 1791597794
