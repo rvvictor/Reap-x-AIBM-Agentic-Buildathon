@@ -6,7 +6,7 @@
 - Why: 006/008/010 aún no están en main
 - Failing: -
 - Commands: bash .uak/bin/smoke
-- Next: Humano: Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
+- Next: Integrated in main: 773b7a583cddbd2d2c7563cee8b8aaebbb0fde0c (recorded by victor-2)
 
 ## History
 - 1791599673 | CLAIMED | victor-2 | claim; next: Redactar README (EN) y docs/DEMO.md con guion; e2e del flujo de 6 pasos cuando 006/008/010 estén en main
@@ -18,3 +18,4 @@
 - 1791609461 | REVIEW | victor-1 | review; approve; SHA f7e2126846a8455a60bc9ac2c0fac9b02666b222; reviewer victor-1
 - 1791609511 | REVIEW | victor-2 | heartbeat; lease until 1791623911
 - 1791609520 | REVIEW | victor-2 | merge rechazado; Diff outside Paths: .uak/PROJECT.md (new test files: add the dir to Additive-Paths in PROJECT.md)
+- 1791609649 | INTEGRATED | victor-2 | integrate; recorded by victor-2; PR https://github.com/rvvictor/Reap-x-AIBM-Agentic-Buildathon/pull/15; merged 773b7a583cddbd2d2c7563cee8b8aaebbb0fde0c; proof ancestry
